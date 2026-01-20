@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./swipper/swipper.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/other.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <a href="" class="logo">
+            <img src="./images/logo.svg" alt="">
+        </a>
+        <ul class="nav">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./people.html">People</a></li>
+            <li><a href="./news.html">News</a></li>
+            <li><a href="./research.html">Research</a></li>
+            <li><a href="./publication.html">Publications</a></li>
+            <li><a href="./join.html">Join Us</a></li>
+        </ul>
+    </header>
+
+    <main class="w  people">
+        <div class="shadow panel">
+            <h4>Members</h4>
+            <ul>
+                <li><a href="#news">Group News</a></li>
+            </ul>
+        </div>
+        <div class="shadow people-main">
+            <section class="news" id="news">
+                <h2 class="h2t">2025 Oct</h2>
+                <div class="content  padd20205020">
+                    <img src="./images/banner1.avif" alt="">
+                </div>
+            </section>
+              <section class="news" id="news">
+                <h2 class="h2t">2024 Oct</h2>
+                <div class="content  padd20205020">
+                    <img src="./images/banner1.avif" alt="">
+                </div>
+            </section>
+
+
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const panel = document.querySelector('.shadow.panel');
+            const panelLinks = panel.querySelectorAll('a');
+            const initialTop = 0;
+            panel.style.top = initialTop + 'px';
+            window.addEventListener('scroll', function () {
+                // if (window.innerWidth > 1200) {
+                panel.style.top = (initialTop + window.pageYOffset) + 'px';
+                // }
+            }, { passive: true });
+        });
+    </script>
+</body>
+
+</html>

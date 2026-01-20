@@ -1,0 +1,227 @@
+/* 轮播图 */
+.h2t {
+    color: #527bbd;
+    border-bottom: 1px solid #666;
+}
+
+.shadow {
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.padd20205020 {
+    padding: 20px 20px 50px 20px;
+}
+
+.people {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    .panel {
+        width: 25%;
+        background-color: #f6f6f6;
+        border-radius: 5px;
+        height: max-content;
+        // position: sticky;
+        position: relative;
+        top: 80px;
+        transition: all .7s;
+
+        h4 {
+            font-weight: 800;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #527bbd;
+            border-bottom: 3px solid #527bbd;
+        }
+
+        ul {
+            li {
+                a {
+                    display: block;
+                    padding: 10px 30px;
+                    font-size: 15px;
+                    line-height: 1.33;
+                    color: #626262;
+                }
+
+
+                &:hover {
+                    background-color: #dddddd;
+                }
+            }
+        }
+    }
+
+
+    .people-main {
+        flex: 1;
+        background-color: #fff;
+        padding: 20px;
+
+        .principle {
+            .content {
+                padding: 20px 20px 50px 20px;
+                display: flex;
+                gap: 30px;
+                justify-content: space-between;
+
+                img {
+                    width: 25%;
+                    height: 250px;
+                }
+            }
+        }
+
+        .postdoctoral,
+        .phd {
+            .content {
+                padding: 20px 20px 50px 20px;
+                display: grid;
+                gap: 30px;
+                grid-template-columns: repeat(2, 1fr);
+
+                .item {
+                    display: flex;
+                    gap: 15px;
+
+                    img {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+
+        .group {
+            .content {
+                padding: 20px 20px 20px 20px;
+
+                .item {
+                    display: flex;
+                    gap: 30px;
+
+                    img {
+                        width: 40%;
+                    }
+                }
+
+            }
+        }
+
+        // news
+        // research
+        .research {
+            .content {
+                padding: 20px 20px 20px 20px;
+
+                .item {
+                    display: flex;
+                    gap: 30px;
+
+                    img {
+                        width: 40%;
+                    }
+                }
+
+            }
+        }
+
+        .laboratory {
+            .content {
+                padding-bottom: 20px;
+            }
+
+            video {
+                width: 100%;
+                min-height: 350px;
+                margin-bottom: 20px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        // publication
+        .journal {
+            .jourItem {
+                display: flex;
+                margin-bottom: 10px;
+                font-size: 15px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                span {
+                    width: 5%;
+                }
+
+                p {
+                    flex: 1;
+                }
+            }
+        }
+
+        // Join us
+        .gallery {
+            .jItem {
+                display: flex;
+                justify-content: space-between;
+                gap: 30px;
+
+                img {
+                    width: 45%;
+                }
+
+                p {
+                    flex: 1;
+                }
+            }
+        }
+
+        .jPhd {
+            .jourItem {
+                display: flex;
+                margin-bottom: 10px;
+                font-size: 15px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+
+                span {
+                    width: 5%;
+                }
+
+                p {
+                    flex: 1;
+                }
+            }
+        }
+
+        .postdocs {
+            ul {
+                list-style: disc;
+                padding-left: 40px;
+            }
+        }
+
+        .ctc{
+            display: flex;
+            padding-bottom: 20px;
+            ul{
+                li{
+                    font-size: 14px;
+                }
+            }
+            img{
+                width: 30%;
+            }
+        }
+
+    }
+}

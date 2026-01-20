@@ -1,0 +1,160 @@
+/* 轮播图 */
+.h2t {
+  color: #527bbd;
+  border-bottom: 1px solid #666;
+}
+.shadow {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.padd20205020 {
+  padding: 20px 20px 50px 20px;
+}
+.people {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.people .panel {
+  width: 25%;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  height: max-content;
+  position: relative;
+  top: 80px;
+  transition: all 0.7s;
+}
+.people .panel h4 {
+  font-weight: 800;
+  padding: 15px 30px;
+  font-size: 18px;
+  color: #527bbd;
+  border-bottom: 3px solid #527bbd;
+}
+.people .panel ul li a {
+  display: block;
+  padding: 10px 30px;
+  font-size: 15px;
+  line-height: 1.33;
+  color: #626262;
+}
+.people .panel ul li:hover {
+  background-color: #dddddd;
+}
+.people .people-main {
+  flex: 1;
+  background-color: #fff;
+  padding: 20px;
+}
+.people .people-main .principle .content {
+  padding: 20px 20px 50px 20px;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+.people .people-main .principle .content img {
+  width: 25%;
+  height: 250px;
+}
+.people .people-main .postdoctoral .content,
+.people .people-main .phd .content {
+  padding: 20px 20px 50px 20px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.people .people-main .postdoctoral .content .item,
+.people .people-main .phd .content .item {
+  display: flex;
+  gap: 15px;
+}
+.people .people-main .postdoctoral .content .item img,
+.people .people-main .phd .content .item img {
+  width: 40%;
+}
+.people .people-main .group .content {
+  padding: 20px 20px 20px 20px;
+}
+.people .people-main .group .content .item {
+  display: flex;
+  gap: 30px;
+}
+.people .people-main .group .content .item img {
+  width: 40%;
+}
+.people .people-main .research .content {
+  padding: 20px 20px 20px 20px;
+}
+.people .people-main .research .content .item {
+  display: flex;
+  gap: 30px;
+}
+.people .people-main .research .content .item img {
+  width: 40%;
+}
+.people .people-main .laboratory .content {
+  padding-bottom: 20px;
+}
+.people .people-main .laboratory video {
+  width: 100%;
+  min-height: 350px;
+  margin-bottom: 20px;
+}
+.people .people-main .laboratory video:last-of-type {
+  margin-bottom: 0;
+}
+.people .people-main .journal .jourItem {
+  display: flex;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.people .people-main .journal .jourItem:last-of-type {
+  margin-bottom: 0;
+}
+.people .people-main .journal .jourItem span {
+  width: 5%;
+}
+.people .people-main .journal .jourItem p {
+  flex: 1;
+}
+.people .people-main .gallery .jItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.people .people-main .gallery .jItem img {
+  width: 45%;
+}
+.people .people-main .gallery .jItem p {
+  flex: 1;
+}
+.people .people-main .jPhd .jourItem {
+  display: flex;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.people .people-main .jPhd .jourItem:last-of-type {
+  margin-bottom: 0;
+}
+.people .people-main .jPhd .jourItem span {
+  width: 5%;
+}
+.people .people-main .jPhd .jourItem p {
+  flex: 1;
+}
+.people .people-main .postdocs ul {
+  list-style: disc;
+  padding-left: 40px;
+}
+.people .people-main .ctc {
+  display: flex;
+  padding-bottom: 20px;
+}
+.people .people-main .ctc ul li {
+  font-size: 14px;
+}
+.people .people-main .ctc img {
+  width: 30%;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./swipper/swipper.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/other.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <a href="" class="logo">
+            <img src="./images/logo.svg" alt="">
+        </a>
+        <ul class="nav">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./people.html">People</a></li>
+            <li><a href="./news.html">News</a></li>
+            <li><a href="./research.html">Research</a></li>
+            <li><a href="./publication.html">Publications</a></li>
+            <li><a href="./join.html">Join Us</a></li>
+        </ul>
+    </header>
+
+    <main class="w  people">
+
+        <div class="shadow panel">
+            <h4>Members</h4>
+            <ul>
+                <li><a href="#research">Research Topics</a></li>
+                <li><a href="#laboratory">Laboratory Videos</a></li>
+            </ul>
+        </div>
+        <div class="shadow people-main">
+
+            <section class="research" id="research">
+                <h2 class="h2t">Research Topics</h2>
+                <div class="content">
+                    <div class="item" >
+                        <img src="./images/banner1.avif" alt="">
+                        <p>Here's a professional Postdoctoral Fellows section design that can be integrated into your
+                            research team webpage. This includes profiles, research interests, and interactive elements.
+                        </p>
+                    </div>
+                    <div class="item" style="margin: 20px 0;">
+                        <img src="./images/banner1.avif" alt="">
+                        <p>Here's a professional Postdoctoral Fellows section design that can be integrated into your
+                            research team webpage. This includes profiles, research interests, and interactive elements.
+                        </p>
+                    </div>
+                    <div class="item">
+                        <img src="./images/banner1.avif" alt="">
+                        <p>Here's a professional Postdoctoral Fellows section design that can be integrated into your
+                            research team webpage. This includes profiles, research interests, and interactive elements.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="laboratory" id="laboratory">
+                <h2 class="h2t">Laboratory Videos</h2>
+                <div class="padd20205020 content">
+                    <video controls poster="./images/video-thumb1.jpg">
+                        <source src="" type="video/mp4">
+                        <source src="" type="video/mp4">
+                        您的浏览器不支持视频标签。
+                    </video>
+                     <video controls poster="./images/video-thumb1.jpg">
+                        <source src="" type="video/mp4">
+                        <source src="" type="video/mp4">
+                        您的浏览器不支持视频标签。
+                    </video>
+                     <video controls poster="./images/video-thumb1.jpg">
+                        <source src="" type="video/mp4">
+                        <source src="" type="video/mp4">
+                        您的浏览器不支持视频标签。
+                    </video>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const panel = document.querySelector('.shadow.panel');
+            const panelLinks = panel.querySelectorAll('a');
+            const initialTop = 0;
+            panel.style.top = initialTop + 'px';
+            window.addEventListener('scroll', function () {
+                // if (window.innerWidth > 1200) {
+                panel.style.top = (initialTop + window.pageYOffset) + 'px';
+                // }
+            }, { passive: true });
+        });
+    </script>
+</body>
+
+</html>

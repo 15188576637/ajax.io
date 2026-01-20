@@ -2,82 +2,179 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-
-		body {
-			font-family: Arial, sans-serif;
-			background-color: #f9f9f9;
-			color: #333;
-			line-height: 1.6;
-		}
-
-		.container {
-			width: 80%;
-			margin: 0 auto;
-			max-width: 1200px;
-			min-width: 960px;
-			padding: 20px;
-			background-color: #fff;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-		}
-
-
-		/* 导航栏样式 */
-		nav {
-			background-color: #007BFF;
-			padding: 10px 0;
-			margin-bottom: 30px;
-		}
-
-		nav ul {
-			list-style-type: none;
-			text-align: center;
-		}
-
-		nav ul li {
-			display: inline;
-			margin: 0 15px;
-		}
-
-		nav ul li a {
-			text-decoration: none;
-			color: white;
-			font-weight: bold;
-			font-size: 16px;
-		}
-
-		nav ul li a:hover {
-			color: #FFD700;
-		}
-
-		img {
-			width: 100%;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./swipper/swipper.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <title>Document</title>
 </head>
 
 <body>
-	<div class="container">
-		<nav>
-			<ul>
-				<li><a href="./index.html" class="act">LANDING PAGE</a></li>
-				<li><a href="./resume.html">RESUME</a></li>
-				<li><a href="./reflection.html">REFLECTION（A）</a></li>
-				<li><a href="./reflection2.html">REFLECTION（F）</a></li>
-				<li><a href="./cover.html">COVER LETTER</a></li>
-			</ul>
-		</nav>
-		<img src="./img/微信图片_20250122215511.jpg" alt="">
-	</div>
+    <header>
+        <a href="" class="logo">
+            <img src="./images/logo.svg" alt="">
+        </a>
+        <ul class="nav">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./people.html">People</a></li>
+            <li><a href="./news.html">News</a></li>
+            <li><a href="./research.html">Research</a></li>
+            <li><a href="./publication.html">Publications</a></li>
+            <li><a href="./join.html">Join Us</a></li>
+        </ul>
+    </header>
+
+
+    <div class="w">
+        <div class="shadow swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/banner1.avif" alt="">
+                    <div class="slide-content">
+                        <h1>Power Electronics</h1>
+                        <p>Our research group mainly focuses on the Electrical Energy and Power Conversion, and aims for
+                            a more energy save andgreen world. We are exploring new topologies,</p>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/banner2.avif" alt="">
+                    <div class="slide-content">
+                        <h1>Featured Publication</h1>
+                        <p>Landscape of our research can be found at the Research. All of our published academic papers
+                            can be viewed from the Publications.</p>
+
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/banner3.avif" alt="">
+                    <div class="slide-content">
+                        <h1>Sponsors and Partners</h1>
+                        <p>We are continuously contributing to Sustainable & Renewable Energy, Transport
+                            Electrification, and Data Computing applications.</p>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 分页器 -->
+            <div class="swiper-pagination"></div>
+            <!-- 导航按钮 -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <div class="w shadow about">
+        <img src="./images/avtor.jpeg" alt="">
+        <div class="txt">
+            <h2 class="h2t">Welcome to the Lab for Advanced Power Electronics - LAPE (CQ Jiang Group)!</h2>
+            <p>Our research group mainly focuses on the Electrical Energy and Power Conversion, and aims for a more
+                energy save andgreen world. We are exploring new topologies, switching methods, materials, and systems
+                to serve with more intelligent andefficient power generation, transmission, and conversion. We are
+                continuously contributing to Sustainable & RenewableEnergy,Transport Electrifcation, and Data Computing
+                applications.Landscape of our research can be found at the Research. All of our published academic
+                papers can be viewed from thePublications.</p>
+        </div>
+    </div>
+
+    <div class="w">
+        <h2 class="h2t" style="margin: 20px 0;">Featured Publication</h2>
+
+        <div class="shadow featured">
+            <div class="imgs">
+                <a href="" class="hoverImg">
+                    <img src="./images/banner1.avif" alt="">
+                </a>
+                <a href="" class="hoverImg">
+                    <img src="./images/banner2.avif" alt="">
+                </a>
+                <a href="" class="hoverImg">
+                    <img src="./images/banner3.avif" alt="">
+                </a>
+            </div>
+            <div class="line"></div>
+            <div class="videos">
+                <video controls poster="./images/video-thumb1.jpg">
+                    <source src="" type="video/mp4">
+                    <source src="" type="video/mp4">
+                    您的浏览器不支持视频标签。
+                </video>
+                <video controls poster="./images/video-thumb2.jpg">
+                    <source src="" type="video/mp4">
+                    <source src="" type="video/mp4">
+                    您的浏览器不支持视频标签。
+                </video>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="w">
+        <h2 class="h2t" style="margin: 20px 0;">Sponsors and Partners</h2>
+
+        <div class="shadow partner">
+
+        </div>
+
+
+    </div>
+
+    <script src="./swipper/swipper.js"></script>
+    <script>
+        // 初始化轮播图
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            speed: 800,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+        });
+
+
+        document.onkeydown = function (e) {
+            // 禁用F12
+            if (e.keyCode === 123) {
+                return false;
+            }
+            // 禁用Ctrl+Shift+I
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+                return false;
+            }
+            // 禁用Ctrl+Shift+J
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 74) {
+                return false;
+            }
+            // 禁用Ctrl+Shift+C
+            if (e.ctrlKey && e.shiftKey && e.keyCode === 67) {
+                return false;
+            }
+            // 禁用Ctrl+U（查看源代码）
+            if (e.ctrlKey && e.keyCode === 85) {
+                return false;
+            }
+        };
+
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+    </script>
 </body>
 
 </html>

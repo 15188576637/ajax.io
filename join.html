@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./swipper/swipper.css">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/other.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <a href="" class="logo">
+            <img src="./images/logo.svg" alt="">
+        </a>
+        <ul class="nav">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./people.html">People</a></li>
+            <li><a href="./news.html">News</a></li>
+            <li><a href="./research.html">Research</a></li>
+            <li><a href="./publication.html">Publications</a></li>
+            <li><a href="./join.html">Join Us</a></li>
+        </ul>
+    </header>
+
+    <main class="w  people">
+
+        <div class="shadow panel">
+            <h4>Members</h4>
+            <ul>
+                <li><a href="#gallery">Photo Gallery</a></li>
+                <li><a href="#jPhd">PhD Students</a></li>
+                <li><a href="#postdocs">Postdocs and RAs</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="shadow people-main">
+
+            <section id="gallery" class="gallery">
+                <h2 class="h2t">Photo Gallery</h2>
+                <div class="padd20205020 content">
+                    <div class="jItem">
+                        <img src="./images/Groupphoto.jpg" alt="">
+                        <p>We are looking for highly motivated undergraduate or master graduates with academic
+                            background in Power Electronics, DC/DC, AC/DC Converters, GaN/SiC Devices, Wireless Power
+                            Transfer, Electric Vehicle Technologies. Successful applicants will be offered full-time
+                            scholarship at highly competitive rates:</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="jPhd" id="jPhd">
+                <h2 class="h2t">PhD Students</h2>
+                <div class="padd20205020 content">
+                    <div class="jourItem">
+                        <span>[1]</span>
+                        <p> S. Ren, C. Q. Jiang, L. Mo, C. Chen, Y. Wang, and C. K. Tse, "Configurable Nanocrystalline
+                            Flake Ribbon Transformer with Variable Leakage Inductance", IEEE Transactions on Power
+                            Electronics, DOI: 10.1109/TPEL.2025.3552753, 2025.</p>
+                    </div>
+
+                    <div class="jourItem">
+                        <span>[2]</span>
+                        <p> X. Wang, C. Q. Jiang, Y. Wang, X.F. Chen, T. Ma, and J. Zhou, "Utilizing Voltage Transients
+                            to Identify Mutual Inductance and Load Voltage of Wireless Power Transfer System", IEEE
+                            Transactions on Power Electronics, DOI: 10.1109/TPEL.2025.3543278, 2025.</p>
+                    </div>
+
+                    <div class="jourItem">
+                        <span>[3]</span>
+                        <p> X. Wang, C. Q. Jiang, Y. Wang, X.F. Chen, T. Ma, and J. Zhou, "Utilizing Voltage Transients
+                            to Identify Mutual Inductance and Load Voltage of Wireless Power Transfer System", IEEE
+                            Transactions on Power Electronics, DOI: 10.1109/TPEL.2025.3543278, 2025.</p>
+                    </div>
+
+                    <div class="jourItem">
+                        <span>[4]</span>
+                        <p> X. Wang, C. Q. Jiang, Y. Wang, X.F. Chen, T. Ma, and J. Zhou, "Utilizing Voltage Transients
+                            to Identify Mutual Inductance and Load Voltage of Wireless Power Transfer System", IEEE
+                            Transactions on Power Electronics, DOI: 10.1109/TPEL.2025.3543278, 2025.</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="postdocs" id="postdocs">
+                <h2 class="h2t">Postdocs and RAs</h2>
+                <div class="padd20205020 content">
+                    <p>We are urgently seeking 2-3 Postdoctoral Fellows and Research Assistants on Power Converters, GaN
+                        and SiC Devices, Magnetics for Power Electronics, and Wireless Power Transfer! (2024)</p>
+                    <ul>
+                        <li>High power AC/DC converters;</li>
+                        <li>High efficiency GaN low voltage DC-DC converter;</li>
+                        <li>Magnetics design for high power density transformer or inductor;</li>
+                        <li>Nanocrystalline magnetic core for power electronics;</li>
+                        <li>Emerging technologies for wireless power transfer.</li>
+                    </ul>
+                    <p>The contract can up to 18 months (extendable) with an annual salary of HKD 362,000 (after tax).
+                        If you are interested, please send your CV to Dr. Jiang via chjiang@cityu.edu.hk.</p>
+                </div>
+            </section>
+
+
+
+            <section class="contact" id="contact">
+                <h2 class="h2t">Contact Us</h2>
+                <div class="padd20205020 ctc">
+                    <ul>
+                        <li>Department of Electrical Engineering</li>
+                        <li>State Key Laboratory of Terahertz and Millimeter Waves</li>
+                        <li>Address: G6411, Yeung Kin Man Academic Building (AC-1), City University of Hong Kong</li>
+                        <li>83 Tat Chee Road, Kowloon, Hong Kong, China</li>
+                        <li>Email: chjiang@cityu.edu.hk</li>
+                        <li>Tel: (+852) 3442-5382</li>
+
+                    </ul>
+
+                    <img src="./images/cityumap.jpg" alt="">
+
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const panel = document.querySelector('.shadow.panel');
+            const panelLinks = panel.querySelectorAll('a');
+            const initialTop = 0;
+            panel.style.top = initialTop + 'px';
+            window.addEventListener('scroll', function () {
+                // if (window.innerWidth > 1200) {
+                panel.style.top = (initialTop + window.pageYOffset) + 'px';
+                // }
+            }, { passive: true });
+        });
+    </script>
+</body>
+
+</html>
