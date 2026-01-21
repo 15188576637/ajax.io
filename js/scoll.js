@@ -170,7 +170,7 @@
 //     });
 // });
 
-
+// 禁用
 document.onkeydown = function (e) {
     // 禁用F12
     if (e.keyCode === 123) {
