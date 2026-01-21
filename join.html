@@ -4,18 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="./swipper/swipper.css">
-    <link rel="stylesheet" href="./css/base.css">
+    <!-- 外部样式表引入 -->
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css"> <!-- Font Awesome图标库 -->
+    <link rel="stylesheet" href="./swipper/swipper.css"> <!-- Swiper轮播图插件样式 -->
+    <link rel="stylesheet" href="./css/base.css"> <!-- 全局基础样式（重置样式、通用类等） -->
     <link rel="stylesheet" href="./css/other.css">
     <title>Document</title>
 </head>
 
 <body>
+    <!-- 网站头部导航区域 -->
     <header>
+        <!-- Logo区域 - 点击可返回首页 -->
         <a href="" class="logo">
-             <img src="./images/Logo.png" alt="">
+            <img src="./images/Logo.png" alt="实验室Logo"> <!-- Logo图像，alt属性为空需补充描述 -->
         </a>
+        <!-- 主导航菜单 -->
         <ul class="nav">
             <li><a href="./index.html">Home</a></li>
             <li><a href="./people.html">People</a></li>
@@ -27,7 +31,7 @@
     </header>
 
     <main class="w  people">
-
+        <!-- 侧边导航面板 -->
         <div class="shadow panel">
             <h4>Join Us</h4>
             <ul>
@@ -37,8 +41,10 @@
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
         </div>
-        <div class="shadow people-main">
 
+        <!-- 主要内容区域 -->
+        <div class="shadow people-main">
+            <!-- 图片库区域 -->
             <section id="gallery" class="gallery">
                 <h2 class="h2t">Photo Gallery</h2>
                 <div class="padd20205020 content">
@@ -52,7 +58,7 @@
                 </div>
             </section>
 
-
+            <!-- 主要内容区域 -->
             <section class="jPhd" id="jPhd">
                 <h2 class="h2t">PhD Students</h2>
                 <div class="padd20205020 content">
@@ -105,7 +111,7 @@
             </section>
 
 
-
+            <!-- 联系我们区域 -->
             <section class="contact" id="contact">
                 <h2 class="h2t">Contact Us</h2>
                 <div class="padd20205020 ctc">
@@ -128,16 +134,19 @@
         </div>
     </main>
     <script>
+        // 侧边栏跟随滚动效果
         document.addEventListener('DOMContentLoaded', function () {
-            const panel = document.querySelector('.shadow.panel');
-            const panelLinks = panel.querySelectorAll('a');
-            const initialTop = 0;
-            panel.style.top = initialTop + 'px';
+            const panel = document.querySelector('.shadow.panel'); // 获取侧边栏元素
+            const panelLinks = panel.querySelectorAll('a'); // 获取侧边栏所有链接
+            const initialTop = 0; // 初始顶部位置
+            panel.style.top = initialTop + 'px'; // 设置初始位置
+
+            // 监听滚动事件，更新侧边栏位置
             window.addEventListener('scroll', function () {
                 // if (window.innerWidth > 1200) {
                 panel.style.top = (initialTop + window.pageYOffset) + 'px';
                 // }
-            }, { passive: true });
+            }, { passive: true }); // 使用passive:true提高滚动性能
         });
     </script>
 

@@ -1,31 +1,44 @@
-/* 轮播图 */
+/* 页面标题样式 - 蓝色文字加下划线 */
 .h2t {
   color: #527bbd;
   border-bottom: 2px solid #527bbd;
 }
+/* 通用阴影效果 */
 .shadow {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+/* 通用内边距：上下20px，左右50px */
 .padd20205020 {
   padding: 20px 20px 50px 20px;
 }
+/* 主要内容区布局 */
 .people {
   margin-top: 20px;
   display: flex;
+  /* 左右分栏布局 */
   justify-content: space-between;
   gap: 20px;
   margin-bottom: 20px;
+  /* 左侧导航栏 */
+  /* 右侧主要内容区 */
 }
 .people .panel {
   width: 25%;
+  /* 占25%宽度 */
   background-color: #f6f6f6;
   border-radius: 5px;
   height: max-content;
+  /* 高度自适应内容 */
   position: relative;
+  /* 相对定位，可跟随滚动 */
   top: 80px;
+  /* 初始位置下移80px */
   transition: all 0.7s;
+  /* 过渡动画 */
+  /* 导航标题 */
+  /* 导航菜单 */
 }
 .people .panel h4 {
   font-weight: 800;
@@ -33,6 +46,9 @@
   font-size: 18px;
   color: #527bbd;
   border-bottom: 3px solid #527bbd;
+}
+.people .panel ul li {
+  /* 鼠标悬停效果 */
 }
 .people .panel ul li a {
   display: block;
@@ -46,8 +62,19 @@
 }
 .people .people-main {
   flex: 1;
+  /* 占据剩余空间 */
   background-color: #fff;
   padding: 20px;
+  /* 实验室负责人区域 */
+  /* 博士后和博士生区域 */
+  /* 团队合影区域 */
+  /* 研究主题区域 */
+  /* 实验室视频区域 */
+  /* 论文发表区域 */
+  /* 加入我们 - 图片库 */
+  /* 加入我们 - 博士生部分 */
+  /* 加入我们 - 博士后和研究助理 */
+  /* 联系我们区域 */
 }
 .people .people-main .principle .content {
   padding: 20px 20px 50px 20px;
@@ -57,14 +84,18 @@
 }
 .people .people-main .principle .content img {
   width: 25%;
+  /* 图片宽度25% */
   height: 250px;
+  /* 固定高度 */
 }
 .people .people-main .postdoctoral .content,
 .people .people-main .phd .content {
   padding: 20px 20px 50px 20px;
   display: grid;
+  /* 网格布局 */
   gap: 30px;
   grid-template-columns: repeat(2, 1fr);
+  /* 两列网格 */
 }
 .people .people-main .postdoctoral .content .item,
 .people .people-main .phd .content .item {
@@ -74,7 +105,9 @@
 .people .people-main .postdoctoral .content .item img,
 .people .people-main .phd .content .item img {
   width: 150px;
+  /* 固定宽度 */
   height: 200px;
+  /* 固定高度 */
 }
 .people .people-main .group .content {
   padding: 20px 20px 20px 20px;
@@ -85,6 +118,7 @@
 }
 .people .people-main .group .content .item img {
   width: 40%;
+  /* 图片占40%宽度 */
 }
 .people .people-main .research .content {
   padding: 20px 20px 20px 20px;
@@ -101,8 +135,11 @@
 }
 .people .people-main .laboratory video {
   width: 100%;
+  /* 视频占满宽度 */
   min-height: 350px;
+  /* 最小高度 */
   margin-bottom: 20px;
+  /* 最后一个视频无底部间距 */
 }
 .people .people-main .laboratory video:last-of-type {
   margin-bottom: 0;
@@ -111,6 +148,9 @@
   display: flex;
   margin-bottom: 10px;
   font-size: 15px;
+  /* 最后一个无底部间距 */
+  /* 序号区域 */
+  /* 内容区域 */
 }
 .people .people-main .journal .jourItem:last-of-type {
   margin-bottom: 0;
@@ -128,9 +168,11 @@
 }
 .people .people-main .gallery .jItem img {
   width: 45%;
+  /* 图片占45%宽度 */
 }
 .people .people-main .gallery .jItem p {
   flex: 1;
+  /* 文字占剩余空间 */
 }
 .people .people-main .jPhd .jourItem {
   display: flex;
@@ -148,7 +190,9 @@
 }
 .people .people-main .postdocs ul {
   list-style: disc;
+  /* 列表项圆点标记 */
   padding-left: 40px;
+  /* 左侧缩进 */
 }
 .people .people-main .ctc {
   display: flex;
@@ -156,7 +200,9 @@
 }
 .people .people-main .ctc ul li {
   font-size: 14px;
+  /* 较小字体 */
 }
 .people .people-main .ctc img {
   width: 30%;
+  /* 地图图片宽度 */
 }
