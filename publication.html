@@ -15,19 +15,21 @@
 <body>
     <!-- 网站头部导航区域 -->
     <header>
-        <!-- Logo区域 - 点击可返回首页 -->
-        <a href="" class="logo">
-            <img src="./images/Logo.png" alt="实验室Logo"> <!-- Logo图像，alt属性为空需补充描述 -->
-        </a>
-        <!-- 主导航菜单 -->
-        <ul class="nav">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./people.html">People</a></li>
-            <li><a href="./news.html">News</a></li>
-            <li><a href="./research.html">Research</a></li>
-            <li><a href="./publication.html">Publications</a></li>
-            <li><a href="./join.html">Join Us</a></li>
-        </ul>
+        <div class="w cHnav">
+            <!-- Logo区域 - 点击可返回首页 -->
+            <a href="" class="logo">
+                <img src="./images/Logo.png" alt="实验室Logo"> <!-- Logo图像，alt属性为空需补充描述 -->
+            </a>
+            <!-- 主导航菜单 -->
+            <ul class="nav">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./people.html">People</a></li>
+                <li><a href="./news.html">News</a></li>
+                <li><a href="./research.html">Research</a></li>
+                <li><a href="./publication.html">Publications</a></li>
+                <li><a href="./join.html">Join Us</a></li>
+            </ul>
+        </div>
     </header>
 
     <!-- 页面主要内容区域 -->
@@ -37,147 +39,294 @@
         <div class="shadow panel">
             <h4>Publications</h4>
             <ul>
-                <li><a href="#Journal">Journal</a></li>
-                <li><a href="#conference">conference</a></li>
-                <li><a href="#book">Books</a></li>
-                <li><a href="#dis">Dissertation</a></li>
+                <li><a href="#Journal">Journal Papers</a></li>
+                <li><a href="#conference">Conference Papers</a></li>
+                <li><a href="#book">Book Chapter</a></li>
+                <li><a href="#dis">Patents</a></li>
             </ul>
         </div>
         <!-- 内容区域 -->
         <div class="shadow people-main">
             <!-- Journal -->
             <section class="journal" id="Journal">
-                <h2 class="h2t">Selected Journal Publications</h2>
+                <h2 class="h2t">Journal Papers</h2>
                 <div class="padd20205020 content">
                     <div class="jourItem">
-                        <span>[1]</span>
-                        <p> S. Ren, C. Q. Jiang, L. Mo, C. Chen, Y. Wang, and C. K. Tse, "Configurable Nanocrystalline
-                            Flake Ribbon Transformer with Variable Leakage Inductance", IEEE Transactions on Power
-                            Electronics, DOI: 10.1109/TPEL.2025.3552753, 2025.</p>
+                        <span>[J1]</span>
+                        <p> P. Wang, Y. Chen, G. Szczeszynski, S. Allen, D. M. Giuliano, and M. Chen, “MSC-PoL: Hybrid
+                            GaN–Si Multistacked Switched-Capacitor 48-V PwrSiP VRM for Chiplets,” IEEE Transactions on
+                            Power Electronics, vol. 39, no. 4, pp. 4278–4292, Apr. 2024.</p>
                     </div>
 
                     <div class="jourItem">
-                        <span>[2]</span>
-                        <p> X. Wang, C. Q. Jiang, Y. Wang, X.F. Chen, T. Ma, and J. Zhou, "Utilizing Voltage Transients
-                            to Identify Mutual Inductance and Load Voltage of Wireless Power Transfer System", IEEE
-                            Transactions on Power Electronics, DOI: 10.1109/TPEL.2025.3543278, 2025.</p>
+                        <span>[J2]</span>
+                        <p>P. Wang, D. Zhou, H. Li, D. M. Giuliano, G. Szczeszynski, S. Allen, and M. Chen, “Interphase
+                            LC Resonance and Stability Analysis of Series-Capacitor Buck Converters,” IEEE Transactions
+                            on Power Electronics, vol. 38, no. 5, pp. 5680–5687, May 2023.</p>
                     </div>
 
                     <div class="jourItem">
-                        <span>[3]</span>
-                        <p> X. Wang, C. Q. Jiang, Y. Wang, X.F. Chen, T. Ma, and J. Zhou, "Utilizing Voltage Transients
-                            to Identify Mutual Inductance and Load Voltage of Wireless Power Transfer System", IEEE
-                            Transactions on Power Electronics, DOI: 10.1109/TPEL.2025.3543278, 2025.</p>
+                        <span>[J3]</span>
+                        <p>M. Liao, H. Li, P. Wang, T. Sen, Y. Chen, and M. Chen, “Machine Learning Methods for
+                            Feedforward Power-Flow Control of Multi-Active-Bridge Converters,” IEEE Transactions on
+                            Power Electronics, vol. 38, no. 10, pp. 11814–11826, Oct. 2023.</p>
                     </div>
 
                     <div class="jourItem">
-                        <span>[4]</span>
-                        <p> X. Wang, C. Q. Jiang, Y. Wang, X.F. Chen, T. Ma, and J. Zhou, "Utilizing Voltage Transients
-                            to Identify Mutual Inductance and Load Voltage of Wireless Power Transfer System", IEEE
-                            Transactions on Power Electronics, DOI: 10.1109/TPEL.2025.3543278, 2025.</p>
+                        <span>[J4]</span>
+                        <p>Y. Elasser, H. Li, P. Wang, J. Baek, K. Radhakrishnan, S. Jiang, H. Gan, X. Zhang, D. M.
+                            Giuliano, and M. Chen, “Circuits and Magnetics Co-Design for Ultra-Thin Vertical Power
+                            Delivery: A Snapshot Review,” MRS Advances, vol. 8, no. 32, pp. 1603–1611, 2023.</p>
+                    </div>
+                    <div class="jourItem">
+                        <span>[J5]</span>
+                        <p>P. Wang, D. Zhou, Y. Elasser, J. Baek, and M. Chen, “Matrix-Coupled All-in-One Magnetics for
+                            PWM Power Conversion,” IEEE Transactions on Power Electronics, vol. 38, no. 1, pp. 128–141,
+                            Jan. 2023.</p>
+                    </div>
+
+                    <div class="jourItem">
+                        <span>[J6]</span>
+                        <p>T. Liu, X. Zhao, P. Wang, Q. C. Burlingame, J. Hu, K. Roh, Z. Xu, B. P. Rand, M. Chen, and
+                            Y.-L. Loo, “Highly Transparent, Scalable, and Stable Perovskite Solar Cells with Minimal
+                            Aesthetic Compromise,” Advanced Energy Materials, vol. 12, no. 30, Art. 2200402, Aug. 2022.
+                        </p>
+                    </div>
+
+                    <div class="jourItem">
+                        <span>[J7]</span>
+                        <p> P. Wang and M. Chen, “Analysis and Design of Series Voltage Compensators for Differential
+                            Power Processing,” IEEE Journal of Emerging and Selected Topics in Power Electronics, vol.
+                            10, no. 2, pp. 1528–1540, Apr. 2022.
+                        </p>
+                    </div>
+
+                    <div class="jourItem">
+                        <span>[J8]</span>
+                        <p>Y. Chen, P. Wang, H. Cheng, S. Allen, G. Szczeszynski, D. M. Giuliano, and M. Chen, “Virtual
+                            Intermediate Bus CPU Voltage Regulator,” IEEE Transactions on Power Electronics, vol. 37,
+                            no. 9, pp. 10302–10314, Sept. 2022.</p>
+                    </div>
+
+                    <div class="jourItem">
+                        <span>[J9]</span>
+                        <p>P. Wang, R. C. N. Pilawa-Podgurski, P. T. Krein, and M. Chen, “Stochastic Power-Loss Analysis
+                            of Differential Power Processing,” IEEE Transactions on Power Electronics, vol. 36, no. 12,
+                            pp. 13620–13632, Dec. 2021.</p>
+                    </div>
+
+                    <div class="jourItem">
+                        <span>[J10]</span>
+                        <p>Y. Chen, P. Wang, Y. Elasser, and M. Chen, “Multicell Reconfigurable Multi-Input Multi-Output
+                            Energy-Router Architecture,” IEEE Transactions on Power Electronics, vol. 36, no. 3, pp.
+                            2908–2921, Mar. 2021.</p>
+                    </div>
+                    <div class="jourItem">
+                        <span>[J11]</span>
+                        <p>P. Wang, Y. Chen, J. Yuan, R. C. N. Pilawa-Podgurski, and M. Chen, “Differential Power
+                            Processing for Ultra-Efficient Data Storage,” IEEE Transactions on Power Electronics, vol.
+                            35, no. 12, pp. 13138–13149, Dec. 2020.</p>
                     </div>
                 </div>
             </section>
             <!-- conference -->
             <section class="journal" id="conference">
-                <h2 class="h2t">Selected Conference Publications</h2>
+                <h2 class="h2t">Conference Papers</h2>
                 <div class="padd20205020 content">
                     <div class="jourItem">
-                        <span>[P1]</span>
-                        <p> W. Guo and C. Q. Jiang, etc., A power loss measurement method of the magnetic coupler in
-                            inductive power transfer system, CN patent, in filing, 2024.</p>
+                        <span>[C1]</span>
+                        <p> P. Wang, D. Giuliano, S. Allen, and M. Chen, “MSC-PoL: An Ultra-Thin 220-A/48-to-1-V Hybrid
+                            GaN–Si CPU VRM with Multistack Switched-Capacitor Architecture and Coupled Magnetics,” IEEE
+                            Applied Power Electronics Conference and Exposition (APEC), 2023.</p>
                     </div>
 
                     <div class="jourItem">
-                        <span>[P2]</span>
-                        <p> Y. Wang and C. Q. Jiang, etc., A cross lamination structure of the magnetic cores in
-                            inductive power transfer applications, US patent, in filing, 2024.</p>
+                        <span>[C2]</span>
+                        <p>M. Liao, D. H. Zhou, P. Wang, and M. Chen, “Power Systems on Chiplet: Inductor-Linked
+                            Multi-Output Switched-Capacitor Multi-Rail Power Delivery on Chiplets,” Fourth International
+                            Symposium on 3D Power Electronics Integration and Manufacturing (3D-PEIM), Miami, FL, USA,
+                            2023, pp. 1–7.
+                        </p>
                     </div>
 
                     <div class="jourItem">
-                        <span>[P3]</span>
-                        <p> X. Wang, C. Q. Jiang, Y. Wang, X.F. Chen, T. Ma, and J. Zhou, "Utilizing Voltage Transients
-                            to Identify Mutual Inductance and Load Voltage of Wireless Power Transfer System", IEEE
-                            Transactions on Power Electronics, DOI: 10.1109/TPEL.2025.3543278, 2025.</p>
+                        <span>[C3]</span>
+                        <p>P. Wang, D. Zhou, D. M. Giuliano, M. Chen, and Y. Chen, “Multistack Switched-Capacitor
+                            Architecture with Coupled Magnetics for 48-V-to-1-V VRM,” IEEE Workshop on Control and
+                            Modeling for Power Electronics (COMPEL), Tel Aviv, Israel, 2022.
+                        </p>
                     </div>
 
                     <div class="jourItem">
-                        <span>[P4]</span>
-                        <p> X. Wang, C. Q. Jiang, Y. Wang, X.F. Chen, T. Ma, and J. Zhou, "Utilizing Voltage Transients
-                            to Identify Mutual Inductance and Load Voltage of Wireless Power Transfer System", IEEE
-                            Transactions on Power Electronics, DOI: 10.1109/TPEL.2025.3543278, 2025.</p>
+                        <span>[C4]</span>
+                        <p>P. Wang, Y. Elasser, V. Yang, and M. Chen, “WAN Converter: A Family of Multicell PWM
+                            Converters with All-in-One Magnetics,” IEEE Applied Power Electronics Conference and
+                            Exposition (APEC), 2022.
+                        </p>
+                    </div>
+
+                    <div class="jourItem">
+                        <span>[C5]</span>
+                        <p> P. Wang, D. Zhou, V. Yang, and M. Chen, “Matrix-Coupled All-in-One Magnetics for PWM Power
+                            Conversion,” IEEE Workshop on Control and Modeling for Power Electronics (COMPEL), 2021.
+                        </p>
+                    </div>
+
+                    <div class="jourItem">
+                        <span>[C6]</span>
+                        <p>D. H. Zhou, A. Bendory, P. Wang, and M. Chen, “Intrinsic and Robust Voltage Balancing of FCML
+                            Converters with Coupled Inductors,” IEEE Workshop on Control and Modeling for Power
+                            Electronics (COMPEL), 2021.</p>
+
+                    </div>
+
+                    <div class="jourItem">
+                        <span>[C7]</span>
+                        <p>M. Liao, H. Li, P. Wang, Y. Chen, and M. Chen, “Machine Learning Methods for Power-Flow
+                            Control of Multi-Active-Bridge Converters,” IEEE Workshop on Control and Modeling for Power
+                            Electronics (COMPEL), 2021.
+                        </p>
+                    </div>
+                    <div class="jourItem">
+                        <span>[C8]</span>
+                        <p>P. Wang and M. Chen, “Performance Limits of Differential Power Processing,” IEEE Workshop on
+                            Control and Modeling for Power Electronics (COMPEL), Aalborg, Denmark, 2020.
+                        </p>
+
+                    </div>
+                    <div class="jourItem">
+                        <span>[C9]</span>
+                        <p>P. Wang and M. Chen, “Series Voltage Compensator for Differential Power Processing,” IEEE
+                            Energy Conversion Congress and Exposition (ECCE), Detroit, MI, USA, 2020.
+                        </p>
+                    </div>
+                    <div class="jourItem">
+                        <span>[C10]</span>
+                        <p>J. Baek, P. Wang, Y. Elasser, Y. Chen, S. Jiang, and M. Chen, “LEGO-PoL: A 48-V–1.5-V 300-A
+                            Merged Two-Stage Hybrid Converter for Ultra-High-Current Microprocessors,” IEEE Applied
+                            Power Electronics Conference and Exposition (APEC), New Orleans, LA, USA, 2020.
+                        </p>
+                    </div>
+                    <div class="jourItem">
+                        <span>[C11]</span>
+                        <p>P. Wang, Y. Chen, P. Kushima, Y. Elasser, M. Liu, and M. Chen, “A 99.7% Efficient 300-W Hard
+                            Disk Drive Storage Server with Multiport AC-Coupled Differential Power Processing
+                            Architecture,” IEEE Energy Conversion Congress and Exposition (ECCE), Baltimore, MD, USA,
+                            2019.
+                        </p>
+                    </div>
+                    <div class="jourItem">
+                        <span>[C12]</span>
+                        <p>P. Wang, Y. Chen, Y. Elasser, and M. Chen, “Small-Signal Model for Very-Large-Scale
+                            Multi-Active-Bridge Differential Power Processing Architecture,” IEEE Workshop on Control
+                            and Modeling for Power Electronics (COMPEL), Toronto, ON, Canada, 2019.
+                        </p>
+                    </div>
+                    <div class="jourItem">
+                        <span>[C13]</span>
+                        <p>Y. Chen, P. Wang, Y. Elasser, and M. Chen, “LEGO-MIMO Architecture: A Universal Multi-Input
+                            Multi-Output Power Converter with Linear Extendable Group-Operated Power Bricks,” IEEE
+                            Energy Conversion Congress and Exposition (ECCE), Baltimore, MD, USA, 2019.
+                        </p>
+                    </div>
+                    <div class="jourItem">
+                        <span>[C14]</span>
+                        <p>M. Liu, P. Wang, Y. Guan, and M. Chen, “A 13.56-MHz Multiport Wireless-Coupled Battery
+                            Balancer with High-Frequency Online Electrochemical Impedance Spectroscopy,” IEEE Energy
+                            Conversion Congress and Exposition (ECCE), Baltimore, MD, USA, 2019.
+                        </p>
+                    </div>
+                    <div class="jourItem">
+                        <span>[C15]</span>
+                        <p>Y. Guan, P. Wang, M. Liu, D. Xu, and M. Chen, “MSP-LEGO: Modular Series-Parallel Architecture
+                            and LEGO Building Blocks for Non-Isolated High-Voltage Conversion-Ratio Hybrid DC–DC
+                            Converters,” IEEE Energy Conversion Congress and Exposition (ECCE), Baltimore, MD, USA,
+                            2019.
+                        </p>
+                    </div>
+                    <div class="jourItem">
+                        <span>[C16]</span>
+                        <p>Y. Elasser, Y. Chen, P. Wang, and M. Chen, “Sparse Operation of Multi-Winding Transformers in
+                            Multiport AC-Coupled Converters,” IEEE Workshop on Control and Modeling for Power
+                            Electronics (COMPEL), Toronto, ON, Canada, 2019.
+                        </p>
+                    </div>
+                    <div class="jourItem">
+                        <span>[C17]</span>
+                        <p>J. Baek, P. Wang, S. Jiang, and M. Chen, “LEGO-PoL: A 93.1% 54-V–1.5-V 300-A Merged Two-Stage
+                            Hybrid Converter with a Linear Extendable Group-Operated Architecture,” IEEE Workshop on
+                            Control and Modeling for Power Electronics (COMPEL), Toronto, ON, Canada, 2019.
+                        </p>
+                    </div>
+                    <div class="jourItem">
+                        <span>[C18]</span>
+                        <p>Y. Chen, Y. Elasser, P. Wang, J. Baek, and M. Chen, “Turbo-MMC: Minimizing Submodule
+                            Capacitor Size in Modular Multilevel Converters with a Matrix Charge Balancer,” IEEE
+                            Workshop on Control and Modeling for Power Electronics (COMPEL), Toronto, ON, Canada, 2019.
+                        </p>
+                    </div>
+                    <div class="jourItem">
+                        <span>[C19]</span>
+
+                        <p> Y. Chen, P. Wang, H. Li, and M. Chen, “Power-Flow Control in Multi-Active-Bridge Converters:
+                            Theories and Applications,” IEEE Applied Power Electronics Conference and Exposition (APEC),
+                            Anaheim, CA, USA, 2019.
+                        </p>
+                    </div>
+                    <div class="jourItem">
+                        <span>[C20]</span>
+                        <p>P. Wang and M. Chen, “Towards Power FPGA: Architecture, Modeling, and Control of Multiport
+                            Power Converters,” IEEE Workshop on Control and Modeling for Power Electronics (COMPEL),
+                            Padua, Italy, 2018.
+                        </p>
+                    </div>
+                    <div class="jourItem">
+                        <span>[C21]</span>
+                        <p>P. Wang, T. Zhang, and R. Li, “A New Hybrid Modular Multilevel Converter with Integrated
+                            Battery Energy Storage,” IEEE Energy Conversion Congress and Exposition (ECCE), Cincinnati,
+                            OH, USA, 2017.
+                        </p>
+                    </div>
+                    <div class="jourItem">
+                        <span>[C22]</span>
+                        <p>W. Li, P. Wang, C. Yao, Y. Zhang, and H. Tang, “Experimental Investigation of 1D, 2D, and 3D
+                            Metamaterials for Efficiency Enhancement in a 6.78-MHz Wireless Power Transfer System,” IEEE
+                            Wireless Power Transfer Conference (WPTC), Aveiro, Portugal, 2016.
+                        </p>
                     </div>
                 </div>
             </section>
 
             <section class="journal" id="book">
-                <h2 class="h2t">Selected Book Publications</h2>
+                <h2 class="h2t">Book Chapter</h2>
                 <div class="padd20205020 content">
                     <div class="jourItem">
-                        <span>[1]</span>
-                        <p> S. Ren, C. Q. Jiang, L. Mo, C. Chen, Y. Wang, and C. K. Tse, "Configurable Nanocrystalline
-                            Flake Ribbon Transformer with Variable Leakage Inductance", IEEE Transactions on Power
-                            Electronics, DOI: 10.1109/TPEL.2025.3552753, 2025.</p>
-                    </div>
-
-                    <div class="jourItem">
-                        <span>[2]</span>
-                        <p> X. Wang, C. Q. Jiang, Y. Wang, X.F. Chen, T. Ma, and J. Zhou, "Utilizing Voltage Transients
-                            to Identify Mutual Inductance and Load Voltage of Wireless Power Transfer System", IEEE
-                            Transactions on Power Electronics, DOI: 10.1109/TPEL.2025.3543278, 2025.</p>
-                    </div>
-
-                    <div class="jourItem">
-                        <span>[3]</span>
-                        <p> X. Wang, C. Q. Jiang, Y. Wang, X.F. Chen, T. Ma, and J. Zhou, "Utilizing Voltage Transients
-                            to Identify Mutual Inductance and Load Voltage of Wireless Power Transfer System", IEEE
-                            Transactions on Power Electronics, DOI: 10.1109/TPEL.2025.3543278, 2025.</p>
-                    </div>
-
-                    <div class="jourItem">
-                        <span>[4]</span>
-                        <p> X. Wang, C. Q. Jiang, Y. Wang, X.F. Chen, T. Ma, and J. Zhou, "Utilizing Voltage Transients
-                            to Identify Mutual Inductance and Load Voltage of Wireless Power Transfer System", IEEE
-                            Transactions on Power Electronics, DOI: 10.1109/TPEL.2025.3543278, 2025.</p>
+                        <span>[B1]</span>
+                        <p> P. Wang, Z. Qin, J. Yuan, and F. Blaabjerg, “Dual Active Bridge Converter and Its Control,”
+                            in Control of Power Electronic Converters and Systems, vol. 4, 2024.</p>
                     </div>
                 </div>
             </section>
             <section class="journal" id="dis">
-                <h2 class="h2t">Selected Dissertation Publications</h2>
+                <h2 class="h2t">Patents</h2>
                 <div class="padd20205020 content">
                     <div class="jourItem">
                         <span>[P1]</span>
-                        <p> S. Ren, C. Q. Jiang, L. Mo, C. Chen, Y. Wang, and C. K. Tse, "Configurable Nanocrystalline
-                            Flake Ribbon Transformer with Variable Leakage Inductance", IEEE Transactions on Power
-                            Electronics, DOI: 10.1109/TPEL.2025.3552753, 2025.</p>
+                        <p>P. Wang, M. Chen, and G. Szczeszynski, “Methods, Devices, and Systems for Multiphase Coupled
+                            Inductors,” U.S. Patent Application No. 63/612,761, pending.</p>
                     </div>
 
                     <div class="jourItem">
                         <span>[P2]</span>
-                        <p> X. Wang, C. Q. Jiang, Y. Wang, X.F. Chen, T. Ma, and J. Zhou, "Utilizing Voltage Transients
-                            to Identify Mutual Inductance and Load Voltage of Wireless Power Transfer System", IEEE
-                            Transactions on Power Electronics, DOI: 10.1109/TPEL.2025.3543278, 2025.</p>
-                    </div>
-
-                    <div class="jourItem">
-                        <span>[P3]</span>
-                        <p> X. Wang, C. Q. Jiang, Y. Wang, X.F. Chen, T. Ma, and J. Zhou, "Utilizing Voltage Transients
-                            to Identify Mutual Inductance and Load Voltage of Wireless Power Transfer System", IEEE
-                            Transactions on Power Electronics, DOI: 10.1109/TPEL.2025.3543278, 2025.</p>
-                    </div>
-
-                    <div class="jourItem">
-                        <span>[P4]</span>
-                        <p> X. Wang, C. Q. Jiang, Y. Wang, X.F. Chen, T. Ma, and J. Zhou, "Utilizing Voltage Transients
-                            to Identify Mutual Inductance and Load Voltage of Wireless Power Transfer System", IEEE
-                            Transactions on Power Electronics, DOI: 10.1109/TPEL.2025.3543278, 2025.</p>
+                        <p> P. Wang, M. Chen, Y. Chen, and D. M. Giuliano, “Methods, Devices, and Systems for Power
+                            Converters,” International Patent WO2023164566A1, published Aug. 31, 2023.</p>
                     </div>
                 </div>
             </section>
         </div>
     </main>
     <script>
-           // 侧边栏跟随滚动效果
+        // 侧边栏跟随滚动效果
         document.addEventListener('DOMContentLoaded', function () {
             const panel = document.querySelector('.shadow.panel'); // 获取侧边栏元素
             const panelLinks = panel.querySelectorAll('a'); // 获取侧边栏所有链接
@@ -191,6 +340,20 @@
                 // }
             }, { passive: true }); // 使用passive:true提高滚动性能
         });
+
+        // 选择所有包含论文内容的元素
+        const contentElements = document.querySelectorAll('.jourItem p, .content p, .jourItem, .content');
+
+        contentElements.forEach(element => {
+            const html = element.innerHTML;
+            // 使用正则表达式替换所有 P. Wang 为加粗的 P. Wang
+            const updatedHtml = html.replace(/(P\. Wang)/g, '<b>$1</b>');
+
+            if (html !== updatedHtml) {
+                element.innerHTML = updatedHtml;
+            }
+        });
+
     </script>
 
     <script src="./js/scoll.js"></script>

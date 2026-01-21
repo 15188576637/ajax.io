@@ -24,10 +24,11 @@ input {
 	box-sizing: border-box;
 }
 
-html{
+html {
 	scroll-behavior: smooth;
 	scroll-padding-top: 80px;
 }
+
 /* 设置网页统一的字体大小、行高、字体系列相关属性 */
 body {
 	font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei",
@@ -143,17 +144,22 @@ button {
 header {
 	background: linear-gradient(90deg, #dceaf7, #5096d9);
 	height: 60px;
-	padding: 0 20px;
-	display: flex;
+	/* padding: 0 20px; */
 	width: 100%;
-	justify-content: space-between;
-	align-items: center;
 	position: fixed;
 	/* 始终固定定位 */
 	top: 0;
 	left: 0;
 	z-index: 1000;
-	border-bottom: 3px solid  #527bbd;;
+	border-bottom: 3px solid #527bbd;
+	;
+}
+
+.cHnav {
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+	width: 1250px;
 }
 
 
@@ -176,3 +182,6 @@ header {
 .nav li a {
 	font-size: 20px;
 }
+
+
+

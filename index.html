@@ -15,19 +15,23 @@
 <body>
     <!-- 网站头部导航区域 -->
     <header>
-        <!-- Logo区域 - 点击可返回首页 -->
-        <a href="" class="logo">
-            <img src="./images/Logo.png" alt="实验室Logo"> <!-- Logo图像，alt属性为空需补充描述 -->
-        </a>
-        <!-- 主导航菜单 -->
-        <ul class="nav">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./people.html">People</a></li>
-            <li><a href="./news.html">News</a></li>
-            <li><a href="./research.html">Research</a></li>
-            <li><a href="./publication.html">Publications</a></li>
-            <li><a href="./join.html">Join Us</a></li>
-        </ul>
+        <div class="w cHnav">
+            <!-- Logo区域 - 点击可返回首页 -->
+            <a href="" class="logo">
+                <img src="./images/Logo.png" alt="实验室Logo"> <!-- Logo图像，alt属性为空需补充描述 -->
+            </a>
+            <!-- 主导航菜单 -->
+            <ul class="nav">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./people.html">People</a></li>
+                <li><a href="./news.html">News</a></li>
+                <li><a href="./research.html">Research</a></li>
+                <li><a href="./publication.html">Publications</a></li>
+                <li><a href="./join.html">Join Us</a></li>
+            </ul>
+        </div>
+
+
     </header>
 
 
@@ -39,17 +43,14 @@
                     <img src="./images/banner1.avif" alt="">
                     <div class="slide-content">
                         <h1>Power Electronics</h1>
-                        <p>Our research group mainly focuses on the Electrical Energy and Power Conversion, and aims for
-                            a more energy save andgreen world. We are exploring new topologies,</p>
-
+                        
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <img src="./images/banner2.avif" alt="">
                     <div class="slide-content">
                         <h1>Featured Publication</h1>
-                        <p>Landscape of our research can be found at the Research. All of our published academic papers
-                            can be viewed from the Publications.</p>
+                       
 
                     </div>
                 </div>
@@ -57,14 +58,12 @@
                     <img src="./images/banner3.avif" alt="">
                     <div class="slide-content">
                         <h1>Sponsors and Partners</h1>
-                        <p>We are continuously contributing to Sustainable & Renewable Energy, Transport
-                            Electrification, and Data Computing applications.</p>
-
+                      
                     </div>
                 </div>
             </div>
             <!-- 分页器 -->
-            <div class="swiper-pagination"></div>
+            <!-- <div class="swiper-pagination"></div> -->
             <!-- 导航按钮 -->
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -146,10 +145,10 @@
                 delay: 5000,     // 播放间隔5秒
                 disableOnInteraction: false, // 用户交互后继续自动播放
             },
-            pagination: {        // 分页器配置
-                el: '.swiper-pagination', // 分页器容器
-                clickable: true,           // 分页器可点击切换
-            },
+            // pagination: {        // 分页器配置
+            //     el: '.swiper-pagination', // 分页器容器
+            //     clickable: true,           // 分页器可点击切换
+            // },
             navigation: {        // 导航按钮配置
                 nextEl: '.swiper-button-next', // 下一张按钮
                 prevEl: '.swiper-button-prev', // 上一张按钮

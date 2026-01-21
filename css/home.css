@@ -87,34 +87,23 @@
   left: 0;
 }
 .swiper-container .swiper-slide .slide-content {
-  position: relative;
-  /* 相对定位，确保在遮罩之上 */
-  z-index: 2;
-  /* 高于遮罩层 */
-  max-width: 800px;
-  /* 最大宽度限制，避免在大屏幕上过宽 */
-  text-align: center;
-  /* 文字居中 */
-  padding: 0 20px;
+  position: absolute;
   /* 左右内边距，避免文字贴边 */
+  bottom: 0;
+  z-index: 66;
+  height: 80px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
   /* 幻灯片主标题 */
-  /* 幻灯片描述文字 */
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
 }
 .swiper-container .swiper-slide .slide-content h1 {
-  font-size: 3.2rem;
-  /* 大号字体 */
-  margin-bottom: 20px;
+  font-size: 26px;
   /* 底部间距 */
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   /* 文字阴影增强可读性 */
-}
-.swiper-container .swiper-slide .slide-content p {
-  font-size: 1.3rem;
-  /* 中等字体大小 */
-  margin-bottom: 30px;
-  /* 底部间距 */
-  opacity: 0.9;
-  /* 轻微透明，与背景融合 */
 }
 .swiper-container .swiper-button-next,
 .swiper-container .swiper-button-prev {
