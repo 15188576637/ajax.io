@@ -146,35 +146,8 @@
                 crossFade: true
             },
         });
-
-
-        document.onkeydown = function (e) {
-            // 禁用F12
-            if (e.keyCode === 123) {
-                return false;
-            }
-            // 禁用Ctrl+Shift+I
-            if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
-                return false;
-            }
-            // 禁用Ctrl+Shift+J
-            if (e.ctrlKey && e.shiftKey && e.keyCode === 74) {
-                return false;
-            }
-            // 禁用Ctrl+Shift+C
-            if (e.ctrlKey && e.shiftKey && e.keyCode === 67) {
-                return false;
-            }
-            // 禁用Ctrl+U（查看源代码）
-            if (e.ctrlKey && e.keyCode === 85) {
-                return false;
-            }
-        };
-
-        document.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-        });
-    </script>
+  </script>
+  <script src="./js/scoll.js"></script>
 </body>
 
 </html>
