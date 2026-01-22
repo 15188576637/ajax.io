@@ -33,7 +33,7 @@
   /* 占满父容器宽度 */
   margin-top: 20px;
   /* 顶部间距 */
-  height: 500px;
+  height: 540px;
   /* 固定高度 */
   position: relative;
   /* 相对定位，为子元素定位提供基准 */
@@ -60,20 +60,6 @@
   /* 轮播图背景图片样式 */
   /* 幻灯片文字内容区域 */
 }
-.swiper-container .swiper-slide::before {
-  content: '';
-  /* 伪元素内容为空 */
-  position: absolute;
-  /* 绝对定位，覆盖整个幻灯片 */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(13, 59, 102, 0.7);
-  /* 深蓝色半透明遮罩 */
-  z-index: 1;
-  /* 确保遮罩在图片之上，文字之下 */
-}
 .swiper-container .swiper-slide img {
   width: 100%;
   /* 占满容器宽度 */
@@ -93,7 +79,7 @@
   z-index: 66;
   height: 80px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.3);
   /* 幻灯片主标题 */
   display: flex;
   align-items: center;
@@ -186,7 +172,7 @@
   /* 网格布局 */
   padding: 20px;
   /* 内边距 */
-  gap: 40px;
+  gap: 20px;
   /* 网格间距 */
   grid-template-columns: repeat(3, 1fr);
   /* 三列等宽网格 */
@@ -195,9 +181,7 @@
 .featured .imgs a {
   background-color: #000;
   /* 黑色背景（在图片加载失败时显示） */
-  min-height: 360px;
-  /* 最小高度 */
-  max-height: 400px;
+  height: 320px;
   /* 最大高度 */
   /* 图片样式 */
 }
