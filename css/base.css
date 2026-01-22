@@ -159,7 +159,8 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	display: flex;
-	width: 1250px;
+	width: 70%;
+	min-width: 1200px;
 	height: 100%;
 	/* width: 900px; */
 	margin: auto;
