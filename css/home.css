@@ -31,7 +31,7 @@
 .swiper-container {
   width: 100%;
   /* 顶部间距 */
-  height: 615px;
+  aspect-ratio: 16 / 9;
   /* 固定高度 */
   position: relative;
   /* 相对定位，为子元素定位提供基准 */
@@ -54,7 +54,6 @@
   /* 隐藏超出部分 */
   color: white;
   /* 文字颜色为白色 */
-  /* 覆盖在图片上的半透明遮罩层 */
   /* 轮播图背景图片样式 */
   /* 幻灯片文字内容区域 */
 }
@@ -139,7 +138,7 @@
   /* 文字内容区域 */
 }
 .about img {
-  width: 200px;
+  width: 20%;
   /* 固定宽度 */
   /* 建议：添加高度限制和object-fit以保持图片比例 */
   /* height: 200px; object-fit: cover; */
@@ -179,7 +178,6 @@
 .featured .imgs a {
   background-color: #000;
   /* 黑色背景（在图片加载失败时显示） */
-  height: 320px;
   /* 最大高度 */
   /* 图片样式 */
 }

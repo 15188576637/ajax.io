@@ -84,8 +84,6 @@
 .people .people-main .principle .content img {
   width: 25%;
   /* 图片宽度25% */
-  height: 250px;
-  /* 固定高度 */
 }
 .people .people-main .postdoctoral .content,
 .people .people-main .phd .content {
@@ -103,10 +101,8 @@
 }
 .people .people-main .postdoctoral .content .item img,
 .people .people-main .phd .content .item img {
-  width: 150px;
-  /* 固定宽度 */
-  height: 200px;
-  /* 固定高度 */
+  width: 35%;
+  /* 图片占35%宽度 */
 }
 .people .people-main .group .content {
   padding: 20px 20px 20px 20px;

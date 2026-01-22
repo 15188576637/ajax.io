@@ -35,7 +35,8 @@
 .swiper-container {
     width: 100%;
     /* 顶部间距 */
-    height: 615px;
+    // height: 615px;
+    aspect-ratio: 16 / 9;
     /* 固定高度 */
     position: relative;
     /* 相对定位，为子元素定位提供基准 */
@@ -54,22 +55,6 @@
         /* 隐藏超出部分 */
         color: white;
         /* 文字颜色为白色 */
-
-        /* 覆盖在图片上的半透明遮罩层 */
-        // &::before {
-        //     content: '';
-        //     /* 伪元素内容为空 */
-        //     position: absolute;
-        //     /* 绝对定位，覆盖整个幻灯片 */
-        //     top: 0;
-        //     left: 0;
-        //     width: 100%;
-        //     height: 100%;
-        //     background-color: rgba(13, 59, 102, 0.7);
-        //     /* 深蓝色半透明遮罩 */
-        //     z-index: 1;
-        //     /* 确保遮罩在图片之上，文字之下 */
-        // }
 
         /* 轮播图背景图片样式 */
         img {
@@ -167,7 +152,7 @@
 
     /* 实验室负责人或团队照片 */
     img {
-        width: 200px;
+       width: 20%;
         /* 固定宽度 */
         /* 建议：添加高度限制和object-fit以保持图片比例 */
         /* height: 200px; object-fit: cover; */
@@ -214,7 +199,7 @@
             // min-height: 360px;
             // /* 最小高度 */
             // max-height: 400px;
-            height: 320px;
+            // height: 320px;
             /* 最大高度 */
 
             /* 图片样式 */
