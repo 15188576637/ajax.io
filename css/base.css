@@ -160,11 +160,14 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	display: flex;
-	width: 65%;
-	min-width: 1140px;
+	/* width: 65%;
+	min-width: 1140px; */
+
+	width: 100%;
+	padding: 0 20px;
 	
 	height: 100%;
-	/* width: 900px; */
+	min-width: 900px;
 	margin: auto;
 }
 

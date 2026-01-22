@@ -43,42 +43,40 @@
     </header>
 
 
+
+
+
+
     <div class="w">
         <!-- w类用于控制内容宽度 -->
-        <!-- Swiper轮播图区域 -->
-        <div class="shadow swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="./images/banner1.avif" alt="">
+        <!-- 自定义轮播图区域 -->
+        <div class="shadow carousel-container" id="carousel">
+            <div class="carousel-wrapper">
+                <div class="carousel-slide active">
+                    <img src="./images/banner1.avif" alt="Power Electronics">
                     <div class="slide-content">
                         <h1>Power Electronics</h1>
-
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <img src="./images/banner2.avif" alt="">
+                <div class="carousel-slide">
+                    <img src="./images/banner2.avif" alt="Featured Publication">
                     <div class="slide-content">
                         <h1>Featured Publication</h1>
-
-
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <img src="./images/banner3.avif" alt="">
+                <div class="carousel-slide">
+                    <img src="./images/banner3.avif" alt="Sponsors and Partners">
                     <div class="slide-content">
                         <h1>Sponsors and Partners</h1>
-
                     </div>
                 </div>
             </div>
-            <!-- 分页器 -->
-            <!-- <div class="swiper-pagination"></div> -->
+
             <!-- 导航按钮 -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <button class="carousel-btn carousel-btn-prev" aria-label="上一张">‹</button>
+            <button class="carousel-btn carousel-btn-next" aria-label="下一张">›</button>
         </div>
     </div>
-
 
     <!-- 实验室介绍区域 -->
     <div class="w shadow about">
@@ -146,32 +144,108 @@
     </div>
 
     <!-- JavaScript脚本引入 -->
-    <script src="./swipper/swipper.js"></script> 
+
+    <!-- <script src="./js/scoll.js"></script> -->
+
+
+
     <script>
-        // Swiper轮播图初始化配置
-        const swiper = new Swiper('.swiper-container', {
-            loop: true,           // 循环播放模式
-            speed: 800,          // 切换动画速度(毫秒)
-            autoplay: {          // 自动播放配置
-                delay: 5000,     // 播放间隔5秒
-                disableOnInteraction: false, // 用户交互后继续自动播放
-            },
-            // pagination: {        // 分页器配置
-            //     el: '.swiper-pagination', // 分页器容器
-            //     clickable: true,           // 分页器可点击切换
-            // },
-            navigation: {        // 导航按钮配置
-                nextEl: '.swiper-button-next', // 下一张按钮
-                prevEl: '.swiper-button-prev', // 上一张按钮
-            },
-            effect: 'fade',      // 切换效果:淡入淡出
-            fadeEffect: {        // 淡入淡出效果详细配置
-                crossFade: true  // 启用交叉淡入淡出效果
-            },
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.getElementById('carousel');
+            const wrapper = carousel.querySelector('.carousel-wrapper');
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const prevBtn = carousel.querySelector('.carousel-btn-prev');
+            const nextBtn = carousel.querySelector('.carousel-btn-next');
+
+            let currentIndex = 0;
+            const totalSlides = slides.length;
+
+            // 更新轮播图位置
+            function updateCarousel() {
+                const translateX = -currentIndex * 100;
+                wrapper.style.transform = `translateX(${translateX}%)`;
+
+                // 更新active状态（可选）
+                slides.forEach((slide, index) => {
+                    slide.classList.toggle('active', index === currentIndex);
+                });
+            }
+
+            // 下一张
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                updateCarousel();
+            }
+
+            // 上一张
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            }
+
+            // 事件监听
+            prevBtn.addEventListener('click', prevSlide);
+            nextBtn.addEventListener('click', nextSlide);
+
+            // 可选：自动轮播
+            let autoPlayInterval;
+
+            function startAutoPlay() {
+                autoPlayInterval = setInterval(nextSlide, 5000); // 5秒自动切换
+            }
+
+            function stopAutoPlay() {
+                clearInterval(autoPlayInterval);
+            }
+
+            // 鼠标悬停时停止自动轮播
+            carousel.addEventListener('mouseenter', stopAutoPlay);
+            carousel.addEventListener('mouseleave', startAutoPlay);
+
+            // 开始自动轮播
+            startAutoPlay();
+
+            // 键盘导航支持
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                } else if (e.key === 'ArrowRight') {
+                    nextSlide();
+                }
+            });
+
+            // 触摸滑动支持（移动端）
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            carousel.addEventListener('touchstart', function (e) {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            carousel.addEventListener('touchend', function (e) {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, { passive: true });
+
+            function handleSwipe() {
+                const swipeThreshold = 50; // 滑动阈值
+
+                if (touchEndX < touchStartX - swipeThreshold) {
+                    // 向左滑动，下一张
+                    nextSlide();
+                }
+
+                if (touchEndX > touchStartX + swipeThreshold) {
+                    // 向右滑动，上一张
+                    prevSlide();
+                }
+            }
+
+            // 初始化
+            updateCarousel();
         });
     </script>
-    <!-- <script src="./js/scoll.js"></script> -->
-   
+
 </body>
 
 </html>
