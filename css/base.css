@@ -36,8 +36,9 @@ body {
 	color: #333;
 	background-color: #eef0f4;
 	padding-top: 60px;
-
 }
+
+
 
 h1,
 h2,
@@ -159,8 +160,9 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	display: flex;
-	width: 70%;
-	min-width: 1200px;
+	width: 65%;
+	min-width: 1140px;
+	
 	height: 100%;
 	/* width: 900px; */
 	margin: auto;

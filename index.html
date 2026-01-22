@@ -3,18 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <!-- 外部样式表引入 -->
     <link rel="stylesheet" href="./fontawesome/css/all.min.css"> <!-- Font Awesome图标库 -->
-    <link rel="stylesheet" href="./swipper/swipper.css"> <!-- Swiper轮播图插件样式 -->
+    <link rel="stylesheet" href="./swipper/swipper.css">
     <link rel="stylesheet" href="./css/base.css"> <!-- 全局基础样式（重置样式、通用类等） -->
     <link rel="stylesheet" href="./css/home.css"> <!-- 首页专用样式 -->
     <title>Document</title>
     <style>
-        .w{
+        .w {
             min-width: 820px;
-            width: 65%;
+            width: calc(65% - 240px);
         }
     </style>
 </head>
@@ -42,7 +43,8 @@
     </header>
 
 
-    <div class="w"> <!-- w类用于控制内容宽度 -->
+    <div class="w">
+        <!-- w类用于控制内容宽度 -->
         <!-- Swiper轮播图区域 -->
         <div class="shadow swiper-container">
             <div class="swiper-wrapper">
@@ -50,14 +52,14 @@
                     <img src="./images/banner1.avif" alt="">
                     <div class="slide-content">
                         <h1>Power Electronics</h1>
-                        
+
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <img src="./images/banner2.avif" alt="">
                     <div class="slide-content">
                         <h1>Featured Publication</h1>
-                       
+
 
                     </div>
                 </div>
@@ -65,7 +67,7 @@
                     <img src="./images/banner3.avif" alt="">
                     <div class="slide-content">
                         <h1>Sponsors and Partners</h1>
-                      
+
                     </div>
                 </div>
             </div>
@@ -114,10 +116,12 @@
         <h2 class="h2t homeTitle">Featured Video</h2>
         <div class="shadow featured">
             <div class="videos">
-                <video controls poster="./images/video-thumb1.jpg"> <!-- controls:显示播放控件，poster:视频封面 -->
+                <video controls poster="./images/video-thumb1.jpg">
+                    <!-- controls:显示播放控件，poster:视频封面 -->
                     <source src="" type="video/mp4"> <!-- 视频源文件路径，当前为空需要补充 -->
                     <source src="" type="video/mp4"> <!-- 备用视频格式 -->
-                    您的浏览器不支持视频标签。 <!-- 浏览器不支持video标签时的降级提示 -->
+                    您的浏览器不支持视频标签。
+                    <!-- 浏览器不支持video标签时的降级提示 -->
                 </video>
                 <video controls poster="./images/video-thumb2.jpg">
                     <source src="" type="video/mp4">
@@ -142,7 +146,7 @@
     </div>
 
     <!-- JavaScript脚本引入 -->
-    <script src="./swipper/swipper.js"></script> <!-- Swiper轮播图插件主脚本 -->
+    <script src="./swipper/swipper.js"></script> 
     <script>
         // Swiper轮播图初始化配置
         const swiper = new Swiper('.swiper-container', {
@@ -167,6 +171,7 @@
         });
     </script>
     <!-- <script src="./js/scoll.js"></script> -->
+   
 </body>
 
 </html>
