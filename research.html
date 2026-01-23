@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!-- 外部样式表引入 -->
     <link rel="stylesheet" href="./fontawesome/css/all.min.css"> <!-- Font Awesome图标库 -->
     <link rel="stylesheet" href="./swipper/swipper.css"> <!-- Swiper轮播图插件样式 -->
@@ -48,7 +53,7 @@
         <!-- 主要内容区域 -->
         <div class="shadow people-main">
             <!-- 研究主题区域 -->
-            <section class="research" id="research">
+            <section class="research" id="research" data-article="false" >
                 <h2 class="h2t">Research Topics</h2>
                 <div class="content">
                     <div class="item">
@@ -73,7 +78,7 @@
             </section>
 
             <!-- 实验室视频区域 -->
-            <section class="laboratory" id="laboratory">
+            <section class="laboratory" id="laboratory" data-article="false" >
                 <h2 class="h2t">Laboratory Videos</h2>
                 <div class="padd20205020 content">
                     <video controls poster="./images/video-thumb1.jpg">

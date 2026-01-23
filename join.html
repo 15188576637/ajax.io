@@ -3,8 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!-- 外部样式表引入 -->
     <link rel="stylesheet" href="./fontawesome/css/all.min.css"> <!-- Font Awesome图标库 -->
     <link rel="stylesheet" href="./swipper/swipper.css"> <!-- Swiper轮播图插件样式 -->
@@ -48,7 +53,7 @@
         <!-- 主要内容区域 -->
         <div class="shadow people-main">
             <!-- 图片库区域 -->
-            <section id="gallery" class="gallery">
+            <section id="gallery" class="gallery" data-article="false" >
                 <h2 class="h2t">Photo Gallery</h2>
                 <div class="padd20205020 content">
                     <div class="jItem">
@@ -62,7 +67,7 @@
             </section>
 
             <!-- 主要内容区域 -->
-            <section class="jPhd" id="jPhd">
+            <section class="jPhd" id="jPhd" data-article="false">
                 <h2 class="h2t">PhD Students</h2>
                 <div class="padd20205020 content">
                     <div class="jourItem">
@@ -96,7 +101,7 @@
             </section>
 
 
-            <section class="postdocs" id="postdocs">
+            <section class="postdocs" id="postdocs" data-article="false">
                 <h2 class="h2t">Postdocs and RAs</h2>
                 <div class="padd20205020 content">
                     <p>We are urgently seeking 2-3 Postdoctoral Fellows and Research Assistants on Power Converters, GaN
@@ -115,7 +120,7 @@
 
 
             <!-- 联系我们区域 -->
-            <section class="contact" id="contact">
+            <section class="contact" id="contact" data-article="false">
                 <h2 class="h2t">Contact Us</h2>
                 <div class="padd20205020 ctc">
                     <ul>
