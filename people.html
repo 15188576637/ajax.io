@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-        <meta name="" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!-- 外部样式表引入 -->
     <link rel="stylesheet" href="./fontawesome/css/all.min.css"> <!-- Font Awesome图标库 -->
     <link rel="stylesheet" href="./swipper/swipper.css"> <!-- Swiper轮播图插件样式 -->
@@ -21,7 +21,7 @@
 <body>
     <!-- 网站头部导航区域 -->
     <header>
-         <div class="w cHnav">
+        <div class="w cHnav">
             <!-- Logo区域 - 点击可返回首页 -->
             <a href="" class="logo">
                 <img src="./images/Logo.png" alt="实验室Logo"> <!-- Logo图像，alt属性为空需补充描述 -->
@@ -39,7 +39,8 @@
     </header>
 
     <!-- 页面主要内容区域 -->
-    <main class="w people"> <!-- w类控制宽度，people类用于页面特定样式 -->
+    <main class="w people">
+        <!-- w类控制宽度，people类用于页面特定样式 -->
 
         <!-- 侧边导航面板 -->
         <div class="shadow panel">
@@ -56,7 +57,7 @@
         <div class="shadow people-main">
 
             <!-- 首席研究员（PI）区域 -->
-            <section class="principle" id="principle" data-article="false">
+            <div class="principle" id="principle" data-article="false">
                 <h2 class="h2t">Principle Investigator</h2>
                 <div class="content">
                     <img src="./images/banner1.avif" alt="">
@@ -69,9 +70,9 @@
                         The
                         design is professional, clean, and suitable for academic or research institution websites.</p>
                 </div>
-            </section>
+            </div>
             <!-- 博士后研究员区域 -->
-            <section class="postdoctoral" id="postdoctoral" data-article="false">
+            <div class="postdoctoral" id="postdoctoral" data-article="false">
                 <h2 class="h2t">Postdoctoral Fellows</h2>
                 <div class="content">
                     <div class="item">
@@ -87,9 +88,9 @@
                         </p>
                     </div>
                 </div>
-            </section>
+            </div>
             <!-- 博士生区域 -->
-            <section class="phd" id="phd" data-article="false">
+            <div class="phd" id="phd" data-article="false">
                 <h2 class="h2t">PhD Students</h2>
                 <div class="content">
                     <div class="item">
@@ -105,9 +106,9 @@
                         </p>
                     </div>
                 </div>
-            </section>
+            </div>
             <!-- 团队合影区域 -->
-            <section class="group" id="group" data-article="false">
+            <div class="group" id="group" data-article="false">
                 <h2 class="h2t">Group Photos</h2>
                 <div class="content">
                     <div class="item" style="margin-bottom: 30px;">
@@ -123,11 +124,11 @@
                         </p>
                     </div>
                 </div>
-            </section>
+            </div>
         </div>
     </main>
     <script>
-           // 侧边栏跟随滚动效果
+        // 侧边栏跟随滚动效果
         document.addEventListener('DOMContentLoaded', function () {
             const panel = document.querySelector('.shadow.panel'); // 获取侧边栏元素
             const panelLinks = panel.querySelectorAll('a'); // 获取侧边栏所有链接

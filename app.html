@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>我的个人网站</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+			line-height: 1.6;
+			color: #333;
+			background-color: #f5f5f5;
+		}
+
+		/* 头部样式 */
+		header {
+			background: linear-gradient(135deg, #4a6fa5, #2c3e50);
+			color: white;
+			padding: 2rem 0;
+			text-align: center;
+		}
+
+		/* 导航样式 */
+		nav {
+			background-color: #2c3e50;
+			position: sticky;
+			top: 0;
+			z-index: 100;
+		}
+
+		.nav-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		nav a {
+			color: white;
+			text-decoration: none;
+			padding: 1rem 1.5rem;
+			display: inline-block;
+			transition: background-color 0.3s;
+		}
+
+		nav a:hover {
+			background-color: #34495e;
+		}
+
+		/* Section通用样式 */
+		section {
+			padding: 4rem 2rem;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		section:nth-child(even) {
+			background-color: white;
+		}
+
+		section:nth-child(odd):not(:first-of-type) {
+			background-color: #f8f9fa;
+		}
+
+		h2 {
+			color: #2c3e50;
+			margin-bottom: 2rem;
+			padding-bottom: 0.5rem;
+			border-bottom: 3px solid #4a6fa5;
+			display: inline-block;
+		}
+
+		/* 首页介绍 */
+		#home {
+			text-align: center;
+			padding: 6rem 2rem;
+			background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+				url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+			background-size: cover;
+			background-position: center;
+			color: white;
+		}
+
+		#home h1 {
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+
+		/* 关于我 */
+		.about-content {
+			display: grid;
+			grid-template-columns: 1fr 2fr;
+			gap: 3rem;
+			align-items: center;
+		}
+
+		.profile-img {
+			width: 100%;
+			border-radius: 50%;
+			border: 5px solid #4a6fa5;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+		}
+
+		/* 技能展示 */
+		.skills-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 2rem;
+		}
+
+		.skill-item {
+			background: white;
+			padding: 1.5rem;
+			border-radius: 8px;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+			transition: transform 0.3s;
+		}
+
+		.skill-item:hover {
+			transform: translateY(-5px);
+		}
+
+		.skill-bar {
+			height: 8px;
+			background-color: #e0e0e0;
+			border-radius: 4px;
+			margin-top: 1rem;
+			overflow: hidden;
+		}
+
+		.skill-level {
+			height: 100%;
+			background-color: #4a6fa5;
+			border-radius: 4px;
+		}
+
+		/* 项目展示 */
+		.projects-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 2rem;
+		}
+
+		.project-card {
+			background: white;
+			border-radius: 8px;
+			overflow: hidden;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+			transition: transform 0.3s;
+		}
+
+		.project-card:hover {
+			transform: translateY(-5px);
+		}
+
+		.project-img {
+			width: 100%;
+			height: 200px;
+			object-fit: cover;
+		}
+
+		.project-content {
+			padding: 1.5rem;
+		}
+
+		/* 联系方式 */
+		.contact-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 2rem;
+		}
+
+		.contact-item {
+			text-align: center;
+			padding: 2rem;
+			background: white;
+			border-radius: 8px;
+			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+		}
+
+		.contact-item i {
+			font-size: 2rem;
+			color: #4a6fa5;
+			margin-bottom: 1rem;
+		}
+
+		/* 页脚 */
+		footer {
+			background-color: #2c3e50;
+			color: white;
+			text-align: center;
+			padding: 2rem;
+			margin-top: 2rem;
+		}
+
+		/* 响应式设计 */
+		@media (max-width: 768px) {
+			.about-content {
+				grid-template-columns: 1fr;
+			}
+
+			.profile-img {
+				max-width: 250px;
+				margin: 0 auto;
+			}
+
+			#home h1 {
+				font-size: 2rem;
+			}
+
+			section {
+				padding: 3rem 1rem;
+			}
+		}
+	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+	<!-- 头部区域 -->
+	<header>
+		<h1>欢迎来到我的个人网站</h1>
+		<p>一个展示我的技能、项目和经历的平台</p>
+	</header>
+
+	<!-- 导航区域 -->
+	<nav>
+		<div class="nav-container">
+			<a href="#home"><i class="fas fa-home"></i> 首页</a>
+			<a href="#about"><i class="fas fa-user"></i> 关于我</a>
+			<a href="#skills"><i class="fas fa-code"></i> 技能</a>
+			<a href="#projects"><i class="fas fa-project-diagram"></i> 项目</a>
+			<a href="#contact"><i class="fas fa-envelope"></i> 联系我</a>
+		</div>
+	</nav>
+
+	<!-- 主要内容区域 -->
+	<main>
+		<!-- 首页介绍 -->
+		<section id="home">
+			<h1>你好，我是张三</h1>
+			<p>一名充满热情的全栈开发工程师</p>
+			<p style="margin-top: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+				拥有5年Web开发经验，专注于创建高效、可扩展的应用程序。
+				热衷于学习新技术和解决复杂问题。
+			</p>
+		</section>
+
+		<!-- 关于我 -->
+		<section id="about">
+			<h2>关于我</h2>
+			<div class="about-content">
+				<div>
+					<img
+						src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+						alt="个人照片" class="profile-img">
+				</div>
+				<div>
+					<h3>个人简介</h3>
+					<p style="margin-bottom: 1rem;">
+						我是一名专注于Web技术的开发工程师，毕业于某某大学计算机科学专业。
+						在过去的5年中，我参与了多个大型项目的开发和维护工作。
+					</p>
+					<p style="margin-bottom: 1rem;">
+						我擅长使用现代前端框架如React和Vue.js，以及后端技术如Node.js和Python。
+						我始终致力于编写干净、可维护的代码，并注重用户体验。
+					</p>
+					<p>
+						在工作之余，我喜欢阅读技术博客、参加开发者大会，并与同行交流学习。
+						我相信技术应该服务于人，创造价值。
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- 技能展示 -->
+		<section id="skills">
+			<h2>我的技能</h2>
+			<div class="skills-grid">
+				<div class="skill-item">
+					<h3>前端开发</h3>
+					<p>HTML5, CSS3, JavaScript, TypeScript</p>
+					<div class="skill-bar">
+						<div class="skill-level" style="width: 90%;"></div>
+					</div>
+				</div>
+
+				<div class="skill-item">
+					<h3>前端框架</h3>
+					<p>React, Vue.js, Angular</p>
+					<div class="skill-bar">
+						<div class="skill-level" style="width: 85%;"></div>
+					</div>
+				</div>
+
+				<div class="skill-item">
+					<h3>后端开发</h3>
+					<p>Node.js, Python, Java</p>
+					<div class="skill-bar">
+						<div class="skill-level" style="width: 80%;"></div>
+					</div>
+				</div>
+
+				<div class="skill-item">
+					<h3>数据库</h3>
+					<p>MySQL, MongoDB, PostgreSQL</p>
+					<div class="skill-bar">
+						<div class="skill-level" style="width: 75%;"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 项目展示 -->
+		<section id="projects">
+			<h2>我的项目</h2>
+			<div class="projects-grid">
+				<div class="project-card">
+					<img
+						src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+						alt="电商平台项目" class="project-img">
+					<div class="project-content">
+						<h3>电商平台</h3>
+						<p>一个完整的B2C电商平台，包含用户管理、商品展示、购物车和支付功能。</p>
+						<p><strong>技术栈:</strong> React, Node.js, MongoDB, Stripe API</p>
+					</div>
+				</div>
+
+				<div class="project-card">
+					<img
+						src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+						alt="数据分析仪表板" class="project-img">
+					<div class="project-content">
+						<h3>数据分析仪表板</h3>
+						<p>交互式数据可视化平台，支持实时数据更新和多维度分析。</p>
+						<p><strong>技术栈:</strong> Vue.js, D3.js, Python, Flask</p>
+					</div>
+				</div>
+
+				<div class="project-card">
+					<img
+						src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+						alt="任务管理应用" class="project-img">
+					<div class="project-content">
+						<h3>任务管理应用</h3>
+						<p>团队协作工具，支持任务分配、进度跟踪和实时通讯功能。</p>
+						<p><strong>技术栈:</strong> React Native, Firebase, Redux</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 联系方式 -->
+		<section id="contact">
+			<h2>联系我</h2>
+			<div class="contact-grid">
+				<div class="contact-item">
+					<i class="fas fa-envelope"></i>
+					<h3>邮箱</h3>
+					<p>zhangsan@example.com</p>
+				</div>
+
+				<div class="contact-item">
+					<i class="fas fa-phone"></i>
+					<h3>电话</h3>
+					<p>+86 138 0000 0000</p>
+				</div>
+
+				<div class="contact-item">
+					<i class="fab fa-github"></i>
+					<h3>GitHub</h3>
+					<p>github.com/zhangsan</p>
+				</div>
+
+				<div class="contact-item">
+					<i class="fab fa-linkedin"></i>
+					<h3>LinkedIn</h3>
+					<p>linkedin.com/in/zhangsan</p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- 页脚 -->
+	<footer>
+		<p>&copy; 2023 张三的个人网站. 保留所有权利.</p>
+		<p style="margin-top: 1rem; opacity: 0.8;">
+			本页面使用HTML5语义化标签构建，完全响应式设计
+		</p>
+	</footer>
+
+	<script>
+        // 平滑滚动到锚点
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 60, // 减去导航栏高度
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 页面加载时高亮当前可见的section
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+        
+        function highlightNav() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if(scrollY >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        // 为导航链接添加激活状态样式
+        const style = document.createElement('style');
+        style.textContent = `
+            nav a.active {
+                background-color: #4a6fa5 !important;
+                font-weight: bold;
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // 监听滚动事件
+        window.addEventListener('scroll', highlightNav);
+        window.addEventListener('load', highlightNav);
+	</script>
+</body>
+
+</html>
