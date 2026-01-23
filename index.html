@@ -205,42 +205,8 @@
             // 开始自动轮播
             startAutoPlay();
 
-            // 键盘导航支持
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'ArrowLeft') {
-                    prevSlide();
-                } else if (e.key === 'ArrowRight') {
-                    nextSlide();
-                }
-            });
-
-            // 触摸滑动支持（移动端）
-            let touchStartX = 0;
-            let touchEndX = 0;
-
-            carousel.addEventListener('touchstart', function (e) {
-                touchStartX = e.changedTouches[0].screenX;
-            }, { passive: true });
-
-            carousel.addEventListener('touchend', function (e) {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            }, { passive: true });
-
-            function handleSwipe() {
-                const swipeThreshold = 50; // 滑动阈值
-
-                if (touchEndX < touchStartX - swipeThreshold) {
-                    // 向左滑动，下一张
-                    nextSlide();
-                }
-
-                if (touchEndX > touchStartX + swipeThreshold) {
-                    // 向右滑动，上一张
-                    prevSlide();
-                }
-            }
-
+     
+            
             // 初始化
             updateCarousel();
         });
