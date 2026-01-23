@@ -23,135 +23,41 @@
 .shadow {
     -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
     /* 兼容Webkit浏览器 */
-    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
-    /* 兼容Firefox */
     box-shadow: 0 0 10px rgba(0, 0, 0, .5);
     /* 标准阴影 */
 }
 
 /* ============================================
-   轮播图区域样式 (Swiper)
+   轮播图区域样式 (Carousel)
 ============================================= */
-// .swiper-container {
-//     width: 100%;
-//     /* 顶部间距 */
-//     // height: 615px;
-//     aspect-ratio: 16 / 9;
-//     /* 固定高度 */
-//     position: relative;
-//     /* 相对定位，为子元素定位提供基准 */
-
-//     /* 轮播图单个幻灯片样式 */
-//     .swiper-slide {
-//         position: relative;
-//         /* 相对定位，用于内部绝对定位元素 */
-//         display: flex;
-//         /* 弹性布局，便于内容居中 */
-//         align-items: center;
-//         /* 垂直居中 */
-//         justify-content: center;
-//         /* 水平居中 */
-//         overflow: hidden;
-//         /* 隐藏超出部分 */
-//         color: white;
-//         /* 文字颜色为白色 */
-
-//         /* 轮播图背景图片样式 */
-//         img {
-//             width: 100%;
-//             /* 占满容器宽度 */
-//             height: 100%;
-//             /* 占满容器高度 */
-//             object-fit: cover;
-//             /* 保持宽高比并填充容器，可能裁剪图片 */
-//             position: absolute;
-//             /* 绝对定位，作为背景 */
-//             top: 0;
-//             left: 0;
-//         }
-
-//         /* 幻灯片文字内容区域 */
-//         .slide-content {
-//             position: absolute;
-//             /* 左右内边距，避免文字贴边 */
-//             bottom: 0;
-//             z-index: 66;
-//             height: 80px;
-//             width: 100%;
-//             background-color: rgba(0, 0, 0, .3);
-//             /* 幻灯片主标题 */
-//             display: flex;
-//             align-items: center;
-//             padding: 0 20px;
-//             h1 {
-//                 font-size: 26px;
-//                 /* 底部间距 */
-//                 text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-//                 /* 文字阴影增强可读性 */
-//             }
-
-
-//         }
-//     }
-
-//     /* Swiper导航按钮（上一张/下一张）样式 */
-//     .swiper-button-next,
-//     .swiper-button-prev {
-//         color: white;
-//         /* 箭头颜色 */
-//         background-color: rgba(58, 134, 255, 0.2);
-//         /* 半透明蓝色背景 */
-//         width: 50px;
-//         /* 固定宽度 */
-//         height: 50px;
-//         /* 固定高度 */
-//         border-radius: 50%;
-//         /* 圆形按钮 */
-//         backdrop-filter: blur(5px);
-//         /* 背景模糊效果 */
-//     }
-
-//     /* Swiper导航按钮图标 */
-//     .swiper-button-next:after,
-//     .swiper-button-prev:after {
-//         font-size: 1.5rem;
-//         /* 图标大小 */
-//     }
-
-//     /* Swiper分页器（小圆点）样式 */
-//     .swiper-pagination-bullet {
-//         width: 12px;
-//         /* 小圆点宽度 */
-//         height: 12px;
-//         /* 小圆点高度 */
-//         background-color: rgba(255, 255, 255, 0.5);
-//         /* 半透明白色 */
-//         opacity: 1;
-//         /* 完全不透明 */
-//     }
-
-//     /* 当前激活的分页器小圆点样式 */
-//     .swiper-pagination-bullet-active {
-//         background-color: #fff;
-//         /* 纯白色 */
-//     }
-// }
-
-
 
 .carousel-container {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 9;
-    /* 根据你的需求调整高度 */
+    /* aspect-ratio 的 Safari 兼容方案 */
+    height: 0;
+    padding-top: 56.25%; /* 16:9 宽高比 (9/16=0.5625) */
     overflow: hidden;
+    background-color: #000; /* 加载时的背景色 */
 
-    /* 可选：添加圆角 */
+    /* Safari 15+ 支持 aspect-ratio */
+    @supports (aspect-ratio: 16/9) {
+        height: auto;
+        padding-top: 0;
+        aspect-ratio: 16/9;
+    }
 }
 
 .carousel-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -159,14 +65,15 @@
     position: relative;
     min-width: 100%;
     height: 100%;
+    -webkit-flex-shrink: 0;
     flex-shrink: 0;
 }
 
 .carousel-slide img {
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
-    /* 保持图片比例并填充容器 */
     display: block;
 }
 
@@ -178,11 +85,12 @@
     width: 100%;
     background-color: rgba(0, 0, 0, .3);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
 
 .slide-content h1 {
     font-size: 1.8rem;
-    margin: 0;
+    margin: 15px 0;
     font-weight: bold;
 }
 
@@ -190,6 +98,7 @@
 .carousel-btn {
     position: absolute;
     top: 50%;
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
     color: white;
@@ -199,11 +108,20 @@
     border-radius: 50%;
     font-size: 24px;
     cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-transition: background 0.3s ease;
     transition: background 0.3s ease;
     z-index: 10;
+    -webkit-appearance: none; /* 移除 Safari 默认样式 */
+    appearance: none;
 }
 
 .carousel-btn:hover {
@@ -218,7 +136,6 @@
     right: 20px;
 }
 
-
 /* ============================================
    关于实验室区域样式
 ============================================= */
@@ -227,6 +144,8 @@
     /* 顶部间距 */
     background-color: #fff;
     /* 白色背景 */
+    display: -webkit-box;
+    display: -webkit-flex;
     display: flex;
     /* 弹性布局，图片和文字并排 */
     padding: 15px;
@@ -236,15 +155,20 @@
     img {
         width: 20%;
         /* 固定宽度 */
-        /* 建议：添加高度限制和object-fit以保持图片比例 */
-        /* height: 200px; object-fit: cover; */
-        // height: 300px;
+        height: auto;
+        -webkit-align-self: flex-start;
+        align-self: flex-start;
+        -o-object-fit: cover;
+        object-fit: cover;
     }
 
     /* 文字内容区域 */
     .txt {
         margin-left: 15px;
         /* 左外边距，与图片分隔 */
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
 
         /* 段落样式 */
         p {
@@ -252,6 +176,7 @@
             /* 首行缩进2个字符 */
             margin-top: 10px;
             /* 顶部间距 */
+            word-break: break-word; /* Safari 文本换行优化 */
         }
     }
 }
@@ -265,12 +190,14 @@
 
     /* 图片展示区域 */
     .imgs {
+        display: -webkit-grid;
         display: grid;
         /* 网格布局 */
         padding: 20px;
         /* 内边距 */
         gap: 20px;
         /* 网格间距 */
+        -webkit-grid-template-columns: repeat(3, 1fr);
         grid-template-columns: repeat(3, 1fr);
         /* 三列等宽网格 */
 
@@ -278,18 +205,29 @@
         a {
             background-color: #000;
             /* 黑色背景（在图片加载失败时显示） */
-            // min-height: 360px;
-            // /* 最小高度 */
-            // max-height: 400px;
-            // height: 320px;
-            /* 最大高度 */
+            display: block;
+            overflow: hidden;
+            position: relative;
+            height: 0;
+            padding-bottom: 75%; /* 4:3 比例 */
 
             /* 图片样式 */
             img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
                 height: 100%;
-                /* 占满父容器高度 */
-                /* 建议：添加宽度100%和object-fit以保持图片比例 */
-                /* width: 100%; object-fit: cover; */
+                -o-object-fit: cover;
+                object-fit: cover;
+                -webkit-transition: -webkit-transform 0.3s ease;
+                transition: transform 0.3s ease;
+            }
+
+            /* 悬停效果 */
+            &:hover img {
+                -webkit-transform: scale(1.05);
+                transform: scale(1.05);
             }
         }
     }
@@ -308,12 +246,14 @@
 
     /* 视频展示区域 */
     .videos {
+        display: -webkit-grid;
         display: grid;
         /* 网格布局 */
         gap: 40px;
         /* 网格间距 */
         padding: 20px;
         /* 内边距 */
+        -webkit-grid-template-columns: repeat(2, 1fr);
         grid-template-columns: repeat(2, 1fr);
         /* 两列等宽网格 */
 
@@ -323,7 +263,10 @@
             /* 占满网格列宽度 */
             height: 260px;
             /* 固定高度 */
-            /* 建议：添加object-fit: cover; 以保持视频比例 */
+            -o-object-fit: contain;
+            object-fit: contain;
+            -webkit-transform: translateZ(0); /* Safari 视频渲染优化 */
+            transform: translateZ(0);
         }
     }
 }
@@ -332,11 +275,127 @@
    合作伙伴区域样式
 ============================================= */
 .partner {
-    height: 350px;
-    /* 固定高度 */
+    min-height: 350px;
+    /* 最小高度 */
     background-color: #fff;
     /* 白色背景 */
     margin-bottom: 20px;
     /* 底部间距 */
-    /* 建议：添加padding和flex/grid布局以容纳合作伙伴Logo */
+    padding: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    gap: 30px;
+
+    /* 合作伙伴 Logo */
+    img {
+        max-width: 150px;
+        max-height: 80px;
+        -o-object-fit: contain;
+        object-fit: contain;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        opacity: 0.7;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
+        &:hover {
+            -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+    }
+}
+
+/* Safari 特定修复 */
+@media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) {
+        /* 网格布局回退方案 - 针对旧版 Safari */
+        .featured .imgs,
+        .featured .videos {
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+            
+            a, video {
+                -webkit-box-flex: 1;
+                -webkit-flex: 1 1 calc(33.333% - 20px);
+                flex: 1 1 calc(33.333% - 20px);
+                margin: 10px;
+                min-width: 250px;
+            }
+        }
+        
+        .featured .videos video {
+            -webkit-flex: 1 1 calc(50% - 40px);
+            flex: 1 1 calc(50% - 40px);
+        }
+        
+        /* 关于区域修复 */
+        .about {
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            
+            img {
+                width: 100%;
+                max-width: 300px;
+                margin-bottom: 20px;
+                -webkit-align-self: center;
+                align-self: center;
+            }
+            
+            .txt {
+                margin-left: 0;
+            }
+        }
+        
+        /* gap 属性回退 */
+        .partner {
+            margin: -15px;
+            
+            img {
+                margin: 15px;
+            }
+        }
+    }
+}
+
+/* 针对 Safari 15+ 的优化 */
+@supports (-webkit-touch-callout: none) {
+    .carousel-btn {
+        background-color: rgba(0, 0, 0, 0.7);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+    
+    .slide-content {
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+    }
+    
+    /* 改善 Safari 中的滚动性能 */
+    .carousel-wrapper,
+    .featured .imgs a img {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* 高分辨率屏幕优化 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .carousel-slide img,
+    .featured .imgs img,
+    .partner img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
 }

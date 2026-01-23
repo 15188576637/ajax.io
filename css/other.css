@@ -3,10 +3,9 @@
   color: #527bbd;
   border-bottom: 2px solid #527bbd;
 }
-/* 通用阴影效果 */
+/* 通用阴影效果 - Safari 兼容 */
 .shadow {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 /* 通用内边距：上下20px，左右50px */
@@ -15,8 +14,15 @@
 }
 /* 主要内容区布局 */
 .people {
+  display: -webkit-box;
+  /* Safari 旧版兼容 */
+  display: -webkit-flex;
+  /* Safari 兼容 */
   display: flex;
-  /* 左右分栏布局 */
+  -webkit-box-pack: justify;
+  /* Safari 兼容 */
+  -webkit-justify-content: space-between;
+  /* Safari 兼容 */
   justify-content: space-between;
   gap: 20px;
   margin-bottom: 20px;
@@ -25,17 +31,16 @@
 }
 .people .panel {
   width: 240px;
-  /* 占25%宽度 */
   background-color: #f6f6f6;
   border-radius: 5px;
+  height: -webkit-max-content;
+  /* Safari 兼容 */
   height: max-content;
-  /* 高度自适应内容 */
   position: relative;
-  /* 相对定位，可跟随滚动 */
   top: 80px;
-  /* 初始位置下移80px */
+  -webkit-transition: all 0.7s;
+  /* Safari 兼容 */
   transition: all 0.7s;
-  /* 过渡动画 */
   /* 导航标题 */
   /* 导航菜单 */
 }
@@ -60,15 +65,17 @@
   background-color: #dddddd;
 }
 .people .people-main {
+  -webkit-box-flex: 1;
+  /* Safari 兼容 */
+  -webkit-flex: 1;
   flex: 1;
-  /* 占据剩余空间 */
   background-color: #fff;
   padding: 20px;
   /* 实验室负责人区域 */
   /* 博士后和博士生区域 */
   /* 团队合影区域 */
   /* 研究主题区域 */
-  /* 实验室视频区域 */
+  /* 实验室视频区域 - Safari 视频兼容 */
   /* 论文发表区域 */
   /* 加入我们 - 图片库 */
   /* 加入我们 - 博士生部分 */
@@ -77,99 +84,130 @@
 }
 .people .people-main .principle .content {
   padding: 20px 20px 50px 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   gap: 30px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
 }
 .people .people-main .principle .content img {
   width: 25%;
-  /* 图片宽度25% */
+  -webkit-align-self: flex-start;
+  /* Safari 防止图片拉伸 */
+  align-self: flex-start;
 }
 .people .people-main .postdoctoral .content,
 .people .people-main .phd .content {
   padding: 20px 20px 50px 20px;
+  display: -webkit-grid;
+  /* Safari 兼容 */
   display: grid;
-  /* 网格布局 */
   gap: 30px;
+  -webkit-grid-template-columns: repeat(2, 1fr);
+  /* Safari 兼容 */
   grid-template-columns: repeat(2, 1fr);
-  /* 两列网格 */
 }
 .people .people-main .postdoctoral .content .item,
 .people .people-main .phd .content .item {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   gap: 15px;
 }
 .people .people-main .postdoctoral .content .item img,
 .people .people-main .phd .content .item img {
   width: 35%;
-  /* 图片占35%宽度 */
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
 }
 .people .people-main .group .content {
   padding: 20px 20px 20px 20px;
 }
 .people .people-main .group .content .item {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   gap: 30px;
 }
 .people .people-main .group .content .item img {
   width: 40%;
-  /* 图片占40%宽度 */
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
 }
 .people .people-main .research .content {
   padding: 20px 20px 20px 20px;
 }
 .people .people-main .research .content .item {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   gap: 30px;
 }
 .people .people-main .research .content .item img {
   width: 40%;
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
 }
 .people .people-main .laboratory .content {
   padding-bottom: 20px;
 }
 .people .people-main .laboratory video {
   width: 100%;
-  /* 视频占满宽度 */
   min-height: 350px;
-  /* 最小高度 */
   margin-bottom: 20px;
-  /* 最后一个视频无底部间距 */
+  /* Safari 视频播放器优化 */
+  -webkit-transform: translateZ(0);
+  /* 强制硬件加速 */
+  transform: translateZ(0);
 }
 .people .people-main .laboratory video:last-of-type {
   margin-bottom: 0;
 }
 .people .people-main .journal .jourItem {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   margin-bottom: 10px;
   font-size: 15px;
-  /* 最后一个无底部间距 */
-  /* 序号区域 */
-  /* 内容区域 */
 }
 .people .people-main .journal .jourItem:last-of-type {
   margin-bottom: 0;
 }
 .people .people-main .journal .jourItem span {
   width: 7%;
+  -webkit-flex-shrink: 0;
+  /* Safari 防止内容挤压 */
+  flex-shrink: 0;
 }
 .people .people-main .journal .jourItem p {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
   flex: 1;
 }
 .people .people-main .gallery .jItem {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
   gap: 30px;
 }
 .people .people-main .gallery .jItem img {
   width: 45%;
-  /* 图片占45%宽度 */
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
 }
 .people .people-main .gallery .jItem p {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
   flex: 1;
-  /* 文字占剩余空间 */
 }
 .people .people-main .jPhd .jourItem {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   margin-bottom: 10px;
   font-size: 15px;
@@ -179,25 +217,81 @@
 }
 .people .people-main .jPhd .jourItem span {
   width: 5%;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
 }
 .people .people-main .jPhd .jourItem p {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
   flex: 1;
 }
 .people .people-main .postdocs ul {
   list-style: disc;
-  /* 列表项圆点标记 */
   padding-left: 40px;
-  /* 左侧缩进 */
+  /* Safari 列表样式优化 */
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-padding-start: 40px;
 }
 .people .people-main .ctc {
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   padding-bottom: 20px;
+  /* Safari flex 容器优化 */
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .people .people-main .ctc ul li {
   font-size: 14px;
-  /* 较小字体 */
+  word-break: break-word;
+  /* Safari 长文本换行 */
 }
 .people .people-main .ctc img {
   width: 30%;
-  /* 地图图片宽度 */
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+/* Safari 特定修复 */
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance:none) {
+    /* Safari 网格布局回退方案 */
+    .postdoctoral .content,
+    .phd .content {
+      display: -webkit-flex !important;
+      display: flex !important;
+      -webkit-flex-wrap: wrap !important;
+      flex-wrap: wrap !important;
+    }
+    .postdoctoral .content .item,
+    .phd .content .item {
+      width: calc(50% - 15px) !important;
+    }
+    /* Safari gap 属性回退 */
+    .people {
+      margin: 0 -10px;
+    }
+    .people > .panel,
+    .people > .people-main {
+      margin: 0 10px;
+    }
+    /* Safari 视频最小高度修复 */
+    video {
+      min-height: auto !important;
+      height: auto !important;
+    }
+  }
+}
+/* 针对 Safari 15+ 的优化 */
+@supports (-webkit-touch-callout: none) {
+  .panel {
+    -webkit-backdrop-filter: blur(10px);
+    /* 毛玻璃效果 */
+    backdrop-filter: blur(10px);
+  }
+  /* 防止 Safari 中 flex 项目被压缩 */
+  .item img {
+    -webkit-flex-shrink: 0;
+    flex-shrink: 0;
+  }
 }
