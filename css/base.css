@@ -21,14 +21,17 @@ input {
 
 /* 內减模式 */
 * {
-	-webkit-box-sizing: border-box; /* Safari 3.0+ */
-	-moz-box-sizing: border-box;    /* Firefox 1.0+ */
+	-webkit-box-sizing: border-box;
+	/* Safari 3.0+ */
+	-moz-box-sizing: border-box;
+	/* Firefox 1.0+ */
 	box-sizing: border-box;
 }
 
 html {
 	scroll-behavior: smooth;
-	-webkit-overflow-scrolling: touch; /* Safari 滚动优化 */
+	-webkit-overflow-scrolling: touch;
+	/* Safari 滚动优化 */
 	scroll-padding-top: 80px;
 }
 
@@ -39,8 +42,10 @@ body {
 	color: #333;
 	background-color: #eef0f4;
 	padding-top: 60px;
-	-webkit-font-smoothing: antialiased; /* Safari 字体平滑 */
-	-moz-osx-font-smoothing: grayscale; /* Firefox 字体平滑 */
+	-webkit-font-smoothing: antialiased;
+	/* Safari 字体平滑 */
+	-moz-osx-font-smoothing: grayscale;
+	/* Firefox 字体平滑 */
 }
 
 h1,
@@ -68,15 +73,18 @@ i {
 a {
 	text-decoration: none;
 	color: #333;
-	-webkit-tap-highlight-color: transparent; /* Safari/Chrome 点击高亮 */
+	-webkit-tap-highlight-color: transparent;
+	/* Safari/Chrome 点击高亮 */
 }
 
 /* 设置img的垂直对齐方式为居中对齐，去除img默认下间隙 */
 img {
-	max-width: 100%; /* 更好的响应式处理 */
+	max-width: 100%;
+	/* 更好的响应式处理 */
 	height: auto;
 	vertical-align: middle;
-	-webkit-user-select: none; /* Safari 禁止选中 */
+	-webkit-user-select: none;
+	/* Safari 禁止选中 */
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
@@ -87,10 +95,12 @@ input {
 	border: none;
 	outline: none;
 	color: #333;
-	-webkit-appearance: none; /* Safari 移除默认样式 */
+	-webkit-appearance: none;
+	/* Safari 移除默认样式 */
 	-moz-appearance: none;
 	appearance: none;
-	border-radius: 0; /* Safari 移除圆角 */
+	border-radius: 0;
+	/* Safari 移除圆角 */
 }
 
 /* 左浮动 */
@@ -116,7 +126,8 @@ input {
 
 button {
 	border: none;
-	-webkit-appearance: none; /* Safari 移除默认样式 */
+	-webkit-appearance: none;
+	/* Safari 移除默认样式 */
 	-moz-appearance: none;
 	appearance: none;
 	background: none;
@@ -135,7 +146,8 @@ button {
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
-	-webkit-transition: -webkit-transform 0.3s ease; /* Safari 前缀 */
+	-webkit-transition: -webkit-transform 0.3s ease;
+	/* Safari 前缀 */
 	transition: transform 0.3s ease;
 }
 
@@ -148,7 +160,8 @@ button {
 	height: auto;
 	-webkit-transition: -webkit-transform 0.5s ease;
 	transition: transform 0.5s ease;
-	-webkit-backface-visibility: hidden; /* Safari 修复图片闪烁 */
+	-webkit-backface-visibility: hidden;
+	/* Safari 修复图片闪烁 */
 	backface-visibility: hidden;
 }
 
@@ -167,13 +180,22 @@ button {
 	color: #d73470;
 }
 
+:target {
+	outline: none;
+	background-color: transparent;
+}
+
 header {
 	/* Safari 渐变兼容性 */
-	background: -webkit-linear-gradient(left, #dceaf7, #5096d9); /* Safari 5.1-6.0 */
-	background: -o-linear-gradient(right, #dceaf7, #5096d9); /* Opera 11.1-12.0 */
-	background: -moz-linear-gradient(right, #dceaf7, #5096d9); /* Firefox 3.6-15 */
-	background: linear-gradient(90deg, #dceaf7, #5096d9); /* 标准语法 */
-	
+	background: -webkit-linear-gradient(left, #dceaf7, #5096d9);
+	/* Safari 5.1-6.0 */
+	background: -o-linear-gradient(right, #dceaf7, #5096d9);
+	/* Opera 11.1-12.0 */
+	background: -moz-linear-gradient(right, #dceaf7, #5096d9);
+	/* Firefox 3.6-15 */
+	background: linear-gradient(90deg, #dceaf7, #5096d9);
+	/* 标准语法 */
+
 	height: 40px;
 	width: 100%;
 	position: fixed;
@@ -182,20 +204,24 @@ header {
 	left: 0;
 	z-index: 1000;
 	border-bottom: 3px solid #527bbd;
-	-webkit-transform: translateZ(0); /* Safari 硬件加速 */
+	-webkit-transform: translateZ(0);
+	/* Safari 硬件加速 */
 	transform: translateZ(0);
-	-webkit-backface-visibility: hidden; /* Safari 修复渲染问题 */
+	-webkit-backface-visibility: hidden;
+	/* Safari 修复渲染问题 */
 	backface-visibility: hidden;
 }
 
 .cHnav {
-	-webkit-box-pack: justify; /* Safari 兼容 */
+	-webkit-box-pack: justify;
+	/* Safari 兼容 */
 	-webkit-justify-content: space-between;
 	justify-content: space-between;
 	-webkit-box-align: center;
 	-webkit-align-items: center;
 	align-items: center;
-	display: -webkit-box; /* Safari 旧版兼容 */
+	display: -webkit-box;
+	/* Safari 旧版兼容 */
 	display: -webkit-flex;
 	display: flex;
 	/* width: 65%;
@@ -203,7 +229,7 @@ header {
 
 	width: 100%;
 	padding: 0 20px;
-	
+
 	height: 100%;
 	min-width: 900px;
 	margin: auto;
@@ -216,7 +242,8 @@ header {
 .logo img {
 	height: 100%;
 	max-width: 165px;
-	-webkit-user-drag: none; /* Safari 禁止拖动 */
+	-webkit-user-drag: none;
+	/* Safari 禁止拖动 */
 	-khtml-user-drag: none;
 	-moz-user-drag: none;
 	-o-user-drag: none;
@@ -235,31 +262,33 @@ header {
 
 .nav li a {
 	font-size: 18px;
-	display: inline-block; /* Safari 更好的点击区域 */
+	display: inline-block;
+	/* Safari 更好的点击区域 */
 	position: relative;
 }
 
 /* Safari 特定修复 */
 @media not all and (min-resolution:.001dpcm) {
 	@supports (-webkit-appearance:none) {
+
 		/* Safari 滚动行为回退 */
 		html {
 			scroll-behavior: auto;
 		}
-		
+
 		/* Safari 按钮点击效果优化 */
-		button, 
+		button,
 		.nav li a,
 		input[type="button"],
 		input[type="submit"] {
 			-webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
 		}
-		
+
 		/* Safari 弹性布局优化 */
 		.cHnav {
 			display: -webkit-flex !important;
 		}
-		
+
 		/* Safari 渐变优化 */
 		header {
 			background: -webkit-linear-gradient(left, #dceaf7 0%, #5096d9 100%);
@@ -269,11 +298,13 @@ header {
 
 /* 针对 Safari 15+ 的优化 */
 @supports (-webkit-touch-callout: none) {
+
 	/* iOS Safari 特定优化 */
 	body {
-		-webkit-touch-callout: none; /* 禁止长按菜单 */
+		-webkit-touch-callout: none;
+		/* 禁止长按菜单 */
 	}
-	
+
 	/* iOS 安全区域适配 */
 	@supports (padding: max(0px)) {
 		header {
@@ -281,13 +312,14 @@ header {
 			padding-bottom: env(safe-area-inset-bottom);
 		}
 	}
-	
+
 	/* 改善 Safari 中的滚动性能 */
-	html, body {
+	html,
+	body {
 		-webkit-overflow-scrolling: touch;
 		overscroll-behavior-y: none;
 	}
-	
+
 	/* 禁用 Safari 文本选择 */
 	.nav li a,
 	button {
@@ -297,18 +329,20 @@ header {
 }
 
 /* 高分辨率屏幕优化 */
-@media (-webkit-min-device-pixel-ratio: 2), 
-       (min-resolution: 192dpi),
-       (min-resolution: 2dppx) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+
 	/* 为 Retina 屏幕优化 */
 	.hoverImg img {
 		image-rendering: -webkit-optimize-contrast;
 		image-rendering: crisp-edges;
 	}
-	
+
 	/* 更清晰的边框 */
 	header {
-		border-bottom-width: 1.5px; /* Retina 屏幕上的半像素边框 */
+		border-bottom-width: 1.5px;
+		/* Retina 屏幕上的半像素边框 */
 	}
 }
 
@@ -319,7 +353,7 @@ header {
 		background: none !important;
 		border-bottom: 1px solid #527bbd;
 	}
-	
+
 	.hoverImg:hover img {
 		-webkit-transform: none;
 		transform: none;
