@@ -47,9 +47,7 @@
 .people .panel h4 {
   font-weight: 600;
   padding: 10px 30px;
-  font-size: 18px;
   color: #527bbd;
-  font-family: 'Helevtica';
   border-bottom: 3px solid #527bbd;
 }
 .people .panel ul li {
@@ -61,6 +59,7 @@
   font-size: 15px;
   line-height: 1.33;
   color: #626262;
+  font-family: 'Times New Roman', Times, serif;
 }
 .people .panel ul li:hover {
   background-color: #dddddd;
