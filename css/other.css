@@ -45,10 +45,11 @@
   /* 导航菜单 */
 }
 .people .panel h4 {
-  font-weight: 800;
-  padding: 15px 30px;
+  font-weight: 600;
+  padding: 10px 30px;
   font-size: 18px;
   color: #527bbd;
+  font-family: 'Courier New', Courier, monospace;
   border-bottom: 3px solid #527bbd;
 }
 .people .panel ul li {
