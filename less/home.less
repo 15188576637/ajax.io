@@ -36,10 +36,10 @@
     width: 100%;
     /* aspect-ratio 的 Safari 兼容方案 */
     height: 0;
-    padding-top: 56.25%; /* 16:9 宽高比 (9/16=0.5625) */
+    // padding-top: 56.25%; /* 16:9 宽高比 (9/16=0.5625) */
     overflow: hidden;
     background-color: #000; /* 加载时的背景色 */
-
+    aspect-ratio: 16/9;
     /* Safari 15+ 支持 aspect-ratio */
     @supports (aspect-ratio: 16/9) {
         height: auto;
